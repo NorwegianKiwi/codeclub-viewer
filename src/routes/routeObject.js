@@ -4,8 +4,8 @@ import React from 'react';
 import Route from 'react-router/lib/Route';
 import IndexRoute from 'react-router/lib/IndexRoute';
 
-import App from './pages/App';
-import store from './store';
+import App from '../pages/App';
+import store from '../store';
 
 const lessons = store.getState().lessons;
 const courses = store.getState().context['courseContext'].keys();

@@ -8,7 +8,7 @@ import useRouterHistory from 'react-router/lib/useRouterHistory';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import useScroll from 'react-router-scroll';
 import {Provider} from 'react-redux';
-import routes from './routes';
+import routes from './routes/routes';
 import WithStylesContext from './WithStylesContext';
 
 import store from './store';

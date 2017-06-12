@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import createMemoryHistory from 'react-router/lib/createMemoryHistory';
 import RouterContext from 'react-router/lib/RouterContext';
 import match from 'react-router/lib/match';
-import routes from './routes-static';
+import routes from './routes/routes-static';
 import WithStylesContext from './WithStylesContext';
 import store from './store';
 

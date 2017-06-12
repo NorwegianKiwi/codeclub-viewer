@@ -1,48 +1,12 @@
 import React from 'react';
-import Lesson from './components/Lesson/Lesson';
+import Lesson from '../components/Lesson/Lesson';
 import getRouteObject from './routeObject';
-
-
-const Dummy = () => {
-  const html = {__html: '<div id="DoWeNeedThisId">TODO: Insert static HTML her instead</div>'};
-  console.log('Inserting html:', html.__html);
-  return <div dangerouslySetInnerHTML={html}/>;
-};
-
-
-const setPage = (wrapperObj, page) => {
-  if (wrapperObj.callback) {
-    wrapperObj.callback(page);
-    delete wrapperObj.callback;
-  } else if (!wrapperObj.page) {
-    wrapperObj.page = page;
-  }
-};
-
-const Wrapper = React.createClass({
-  getInitialState() {
-    return {showPage: !!this.props.wrapperObj.page};
-  },
-  componentWillMount() {
-    if (!this.props.wrapperObj.page) {
-      this.props.wrapperObj.callback = (page) => {
-        this.props.wrapperObj.page = page;
-        this.setState({showPage: true});
-      };
-    }
-  },
-  render() {
-    return this.state.showPage ? <this.props.wrapperObj.page {...this.props}/> : <Dummy/>;
-  }
-});
-Wrapper.propTypes = {
-  wrapperObj: React.PropTypes.object.isRequired
-};
+import {ComponentWrapper as Wrapper, setPage} from './ComponentWrapper';
 
 const getComponentFrontPage = (nextState, cb) => {
   const obj = {};
   require.ensure([], require => {
-    setPage(obj, require('./pages/FrontPage').FrontPageContainer);
+    setPage(obj, require('../pages/FrontPage').FrontPageContainer);
   }, 'FrontPageContainer');
   cb(null, (props) => <Wrapper {...props} wrapperObj={obj}/>);
 };
@@ -50,7 +14,7 @@ const getComponentFrontPage = (nextState, cb) => {
 const getComponentNotFound = (nextState, cb) => {
   const obj = {};
   require.ensure([], require => {
-    setPage(obj, require('./pages/PageNotFound').NotFoundContainer);
+    setPage(obj, require('../pages/PageNotFound').NotFoundContainer);
   }, 'NotFoundContainer');
   cb(null, (props) => <Wrapper {...props} wrapperObj={obj}/>);
 };
@@ -58,7 +22,7 @@ const getComponentNotFound = (nextState, cb) => {
 const getComponentPlaylist = (nextState, cb) => {
   const obj = {};
   require.ensure([], (require) => {
-    setPage(obj, require('./pages/PlaylistPage').PlaylistPageContainer);
+    setPage(obj, require('../pages/PlaylistPage').PlaylistPageContainer);
   }, 'PlaylistPageContainer');
   cb(null, (props) => <Wrapper {...props} wrapperObj={obj}/>);
 };
