@@ -28,6 +28,14 @@ const onInsertCss = (...styles) => {
   };
 };
 
+const container = document.getElementById('app');
+const containerIsEmpty = container.innerHTML === '';
+if (containerIsEmpty) {
+  console.log('Container is EMPTY.');
+} else {
+  console.log('Container is NOT empty, it is:' + container.innerHTML);
+}
+
 render(
   <Provider store={store}>
     <WithStylesContext onInsertCss={onInsertCss}>

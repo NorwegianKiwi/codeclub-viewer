@@ -66,7 +66,7 @@ export const PlaylistPage = React.createClass({
         <CourseInfo courseName={this.props.params.course} isStudentMode={this.props.isStudentMode}/>
       </Collapse>;
 
-    return (
+    const playList =
       <Grid fluid={true}>
 
         {/*Title with course name and get started button*/}
@@ -103,8 +103,10 @@ export const PlaylistPage = React.createClass({
             <Col xs={12}>{playlistsAndLessons}</Col>
           </Col>
         </Row>
-      </Grid>
-    );
+      </Grid>;
+
+    // Add id so that we later can extract the statically rendered html; see index.js
+    return <div id="PlaylistPage">{playList}</div>;
   }
 });
 
