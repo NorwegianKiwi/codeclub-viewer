@@ -106,7 +106,7 @@ export const PlaylistPage = React.createClass({
       </Grid>;
 
     // Add id so that we later can extract the statically rendered html; see index.js
-    return <div id="PlaylistPage">{playList}</div>;
+    return playList;
   }
 });
 

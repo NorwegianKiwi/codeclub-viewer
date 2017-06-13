@@ -30,9 +30,12 @@ export const ComponentWrapper = React.createClass({
     }
   },
   render() {
-    return this.state.showPage ? <this.props.wrapperObj.page {...this.props}/> : <Dummy/>;
+    return <div id={this.props.id}>
+      {this.state.showPage ? <this.props.wrapperObj.page {...this.props}/> : <Dummy/>}
+    </div>;
   }
 });
 ComponentWrapper.propTypes = {
+  id: PT.string.isRequired,
   wrapperObj: PT.object.isRequired
 };
