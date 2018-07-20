@@ -12,7 +12,7 @@ import Flag from '../Flag';
 import {createCheckboxesKey} from '../../util';
 import {getLessonFrontmatter} from '../../resources/lessonFrontmatter';
 import {getLevel} from '../../resources/lessons';
-import {getLessonIntro} from '../../resources/lessonContent';
+import {getLessonIntroPromise} from '../../resources/lessonContent';
 import {getTranslator} from '../../selectors/translate';
 import {onlyCheckedMainLanguage} from '../../selectors/filter';
 import {getNumberOfCheckedCheckboxes, getTotalNumberOfCheckboxes} from '../../selectors/checkboxes';
@@ -42,7 +42,6 @@ const LessonItem = ({
   level,
   path,
   external,
-  popoverContent,
   isStudentMode,
   onlyCheckedMainLanguage,
   t,
@@ -55,11 +54,11 @@ const LessonItem = ({
   const instructionButton = isStudentMode ? null :
     <InstructionButton {...{course, lesson, language, isReadme: true, onlyIcon: true, insideLink: true}} />;
 
-  const popoverButton = popoverContent ?
-    <PopoverComponent {...{popoverContent}}>
+  const popoverButton =(
+    <PopoverComponent popoverContent={getLessonIntroPromise(course, lesson, language, false)}>
       <Glyphicon className={styles.popoverGlyph} glyph='info-sign'/>
     </PopoverComponent>
-    : null;
+  );
 
   return (
     <div>
@@ -104,7 +103,6 @@ LessonItem.propTypes = {
   level: PropTypes.number,
   path: PropTypes.string.isRequired,
   external: PropTypes.string,
-  popoverContent: PropTypes.string,
   isStudentMode: PropTypes.bool.isRequired,
   onlyCheckedMainLanguage: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,
@@ -119,7 +117,6 @@ const mapStateToProps = (state, {course, lesson, language}) => {
     level: getLevel(course, lesson),
     path,
     external,
-    popoverContent: getLessonIntro(course, lesson, language, false),
     isStudentMode: state.isStudentMode,
     onlyCheckedMainLanguage: onlyCheckedMainLanguage(state),
     t: getTranslator(state),
