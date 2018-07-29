@@ -10,12 +10,10 @@ const createMarkup = (lessonContent) => {
   return ({__html: processContent(lessonContent, styles)});
 };
 
-const Loading = () => <div>Loading...</div>;
-
 const Content = ({course, lesson, language, isReadme}) => {
   const LoadableContent = Loadable({
     loader: () => getLessonContentPromise(course, lesson, language, isReadme),
-    loading: Loading,
+    loading: () => <div>Loading...</div>,
     render: (loaded) => <div dangerouslySetInnerHTML={createMarkup(loaded)}/>,
   });
   return <LoadableContent/>;

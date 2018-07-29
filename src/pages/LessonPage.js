@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ReactDOM from 'react-dom';
+import Loadable from 'react-loadable';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './LessonPage.scss';
 import LevelIcon from '../components/LevelIcon';
@@ -22,7 +23,6 @@ import {getLessonFrontmatter} from '../resources/lessonFrontmatter';
 import {getLessonIntroTextPromise} from '../resources/lessonContent';
 import {getLessonTags, getLicense} from '../resources/lessons';
 import Head from '../components/Head';
-import Loadable from 'react-loadable';
 
 const renderToggleButtons = () => {
   const nodes = [...document.getElementsByClassName('togglebutton')];
