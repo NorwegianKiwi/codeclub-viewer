@@ -4,7 +4,6 @@ import styles from './PopoverComponent.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Popover from 'react-bootstrap/lib/Popover';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import Loadable from 'react-loadable';
 
 let idCounter = 0;
 
@@ -19,20 +18,10 @@ const PopoverComponent = ({children, popoverContent}) => {
     e.stopPropagation();
     e.preventDefault();
   };
-
-  const LoadablePopoverContent = Loadable({
-    // Using Promise.resolve to convert a normal value (e.g. string) into a promise, if it is not already a promise:
-    loader: () => Promise.resolve(popoverContent),
-    loading:  () => <div>Loading...</div>,
-    render: (loaded) => <div className={styles.content} dangerouslySetInnerHTML={createMarkup(loaded)}/>,
-  });
-
-  const overlay = (
-    <Popover id={`PopoverComponent_id_${++idCounter}`} className={styles.popover} shouldUpdatePosition={true}>
-      <LoadablePopoverContent/>
-    </Popover>
-  );
-  // Using Promise.resolve to convert a normal value (e.g. string) into a promise, if it is not already a promise
+  const overlay =
+    <Popover id={`PopoverComponent_id_${++idCounter}`} className={styles.popover}>
+      <div className={styles.content} dangerouslySetInnerHTML={createMarkup(popoverContent)}/>
+    </Popover>;
   return (
     <OverlayTrigger rootClose {...{animation, placement, trigger, onClick, overlay}}>
       {children}
@@ -43,9 +32,7 @@ const PopoverComponent = ({children, popoverContent}) => {
 PopoverComponent.propTypes = {
   // ownProps
   children: PropTypes.node,
-
-  // popoverContent can be both a normal value/string/node etc, or a promise that resolves to one of these
-  popoverContent: PropTypes.any,
+  popoverContent: PropTypes.string,
 };
 
 export default withStyles(styles)(PopoverComponent);

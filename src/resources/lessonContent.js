@@ -53,12 +53,13 @@ export const getLessonIntroPromise = (course, lesson, language, isReadme) => {
 };
 
 /**
- * Get the text in the first part of HTML markup for the lesson.
+ * Return a promise that resolves to the text in the first part of HTML markup for the lesson.
  * @param {string} course E.g. 'scratch'
  * @param {string} lesson E.g. 'astrokatt'
  * @param {string} language E.g. 'nb'
  * @param {boolean} isReadme
- * @returns {string} Text to e.g. display in a description.
+ * @returns {Promise} A promise that resolves to text to e.g. display in a description.
  */
-export const getLessonIntroText = (course, lesson, language, isReadme) =>
-  getLessonIntro(course, lesson, language, isReadme).replace(/<[^>]*>/g, '');
+export const getLessonIntroTextPromise = (course, lesson, language, isReadme) =>
+  getLessonIntroPromise(course, lesson, language, isReadme)
+    .then(lessonIntro => lessonIntro.replace(/<[^>]*>/g, ''));

@@ -6,7 +6,7 @@ import {getTranslator} from '../selectors/translate';
 
 const Head = ({title, description, language, t}) => {
   const headTitle = title ? title  + ' | ' + t('head.title') : t('head.title');
-  const descriptionContent = description ? description : t('head.description');
+  const descriptionContent = description || t('head.description');
   return (
     <Helmet>
       <html lang={language}/>

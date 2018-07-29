@@ -19,9 +19,10 @@ import Progress from '../components/LessonPage/Progress';
 import ButtonRow from '../components/LessonPage/ButtonRow';
 import Content from '../components/LessonPage/Content';
 import {getLessonFrontmatter} from '../resources/lessonFrontmatter';
-import {getLessonIntroText} from '../resources/lessonContent';
+import {getLessonIntroTextPromise} from '../resources/lessonContent';
 import {getLessonTags, getLicense} from '../resources/lessons';
 import Head from '../components/Head';
+import Loadable from 'react-loadable';
 
 const renderToggleButtons = () => {
   const nodes = [...document.getElementsByClassName('togglebutton')];
@@ -66,6 +67,11 @@ class LessonPage extends React.Component {
       title, level, author, translator, license, tags,
       checkedCheckboxes, totalCheckboxes,
     } = this.props;
+    const AsyncHead = Loadable({
+      loader: () => getLessonIntroTextPromise(course, lesson, language, isReadme),
+      loading: () => <Head {...{title}}/>,
+      render: (loaded) => <Head {...{title}} description={loaded}/>
+    });
     const authorNode = author ?
       <p><i>{t('lessons.writtenby')} <MarkdownRenderer src={author} inline={true} /></i></p> : null;
     const translatorNode = translator ? <p><i>{t('lessons.translatedby')} {translator}</i></p> : null;
@@ -80,7 +86,7 @@ class LessonPage extends React.Component {
     </div>;
     return (
       <div>
-        <Head {...{title}} description={getLessonIntroText(course, lesson, language, isReadme)}/>
+        <AsyncHead/>
         <div className={styles.container}>
           <h1>
             <LevelIcon {...{level}}/>
