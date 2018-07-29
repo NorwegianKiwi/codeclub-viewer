@@ -15,7 +15,10 @@ const PopoverComponent = ({children, popoverContent}) => {
   const animation = true;
   const trigger = 'click';
   const placement = 'bottom';
-  const onClick = (e) => e.preventDefault();
+  const onClick = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+  };
 
   const LoadablePopoverContent = Loadable({
     // Using Promise.resolve to convert a normal value (e.g. string) into a promise, if it is not already a promise:

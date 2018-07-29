@@ -36,7 +36,6 @@
 import webpack from 'webpack';
 import path from 'path';
 
-import MarkdownItAnchor from 'markdown-it-anchor';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItHeaderSections from 'markdown-it-header-sections';
 import MarkdownItImplicitFigures from 'markdown-it-implicit-figures';
@@ -245,7 +244,6 @@ const createConfig = (env = {}) => {
               MarkdownItAttrs,
               MarkdownItHeaderSections,
               MarkdownItImplicitFigures,
-              MarkdownItAnchor,
               [MarkdownItTaskCheckbox, {disabled: false}],
             ],
             highlight,
@@ -298,7 +296,6 @@ const createConfig = (env = {}) => {
           sourceMap: true,
           compress: {
             warnings: false,
-            pure_funcs: 'console.log', // removes these functions from the code
           }
         }),
       ] : []),
@@ -322,7 +319,6 @@ const createConfig = (env = {}) => {
       ...(isHot ? [
         // Create the root index.html
         new HtmlWebpackPlugin({
-          title: 'Kodeklubben',
           template: 'src/index-template.ejs',
           inject: false,
           chunksSortMode: 'dependency' // Make sure they are loaded in the right order in index.html
@@ -351,7 +347,7 @@ const createConfig = (env = {}) => {
 
     devServer: {
       historyApiFallback: { // needed when using browserHistory (instead of hashHistory)
-        index: publicPath
+        index: `${publicPath}index.html`
       },
     },
   };

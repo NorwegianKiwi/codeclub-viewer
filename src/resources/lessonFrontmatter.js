@@ -23,9 +23,7 @@ const lessonFrontmatterContext =
  *           author: 'Geir',
  *           translator: 'Kari',
  *           external: 'https://www.example.com/external', // doesn't always exist
- *           file: 'astrokatt',
  *           path: '/scratch/astrokatt/astrokatt',
- *           pdfPath: '/scratch/astrokatt/astrokatt.pdf',
  *           key: './scratch/astrokatt/astrokatt.md',
  *         },
  *         1: {
@@ -33,9 +31,7 @@ const lessonFrontmatterContext =
  *           level: 1,
  *           author: 'Gro',
  *           translator: 'Per',
- *           file: 'README_nn',
  *           path: '/scratch/astrokatt/README_nn',
- *           pdfPath: '/scratch/astrokatt/README_nn.pdf',
  *           key: './scratch/astrokatt/README_nn.md',
  *         },
  *       },
@@ -62,11 +58,11 @@ const getData = memoize(
       const {
         language, title = '', level = 0, author = '', translator = '', external = ''
       } = lessonFrontmatterContext(key);
+      if (!title) { console.warn('WARNING: The lesson', key, 'did not specify title.'); }
       if (language) {
         const isReadmeKey = file.startsWith('README') ? 1 : 0;
-        const path = `/${course}/${lesson}/${file}`; // TODO: Add publicpath?
-        const pdfPath = `${path}.pdf`;
-        const lessonData = {title, level, author, translator, external, file, path, pdfPath, key};
+        const path = `/${course}/${lesson}/${file}`;
+        const lessonData = {title, level, author, translator, external, path, key};
         assignDeep(lessons, [course, lesson, language, isReadmeKey], lessonData);
       } else {
         console.warn('WARNING: The lesson', key, 'did not specify language, so lesson will not be used.');
@@ -123,7 +119,11 @@ export const getLessonFrontmatter = (course, lesson, language, isReadme) => {
  * @param {string} lesson E.g. 'astrokatt'
  * @return {string[]} An array of languages this lesson exists in, e.g. ['nb', 'en']
  */
-export const getLessonLanguages = (course, lesson) => Object.keys((getData()[course] || {})[lesson] || {});
+export const getLessonLanguages = (course, lesson) => {
+  const lessonObj = (getData()[course] || {})[lesson] || {};
+  // Only return languages where the lesson is defined, and not only the README:
+  return Object.keys(lessonObj).filter(language => lessonObj[language][0]);
+};
 
 /**
  * Whether or not a lesson is translated to a specific language.
