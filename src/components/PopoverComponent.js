@@ -8,9 +8,6 @@ import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 let idCounter = 0;
 
 const PopoverComponent = ({children, popoverContent}) => {
-  const createMarkup = (sanitizedContent) => {
-    return {__html: sanitizedContent};
-  };
   const animation = true;
   const trigger = 'click';
   const placement = 'bottom';
@@ -20,7 +17,7 @@ const PopoverComponent = ({children, popoverContent}) => {
   };
   const overlay =
     <Popover id={`PopoverComponent_id_${++idCounter}`} className={styles.popover}>
-      <div className={styles.content} dangerouslySetInnerHTML={createMarkup(popoverContent)}/>
+      {popoverContent}
     </Popover>;
   return (
     <OverlayTrigger rootClose {...{animation, placement, trigger, onClick, overlay}}>
@@ -32,7 +29,7 @@ const PopoverComponent = ({children, popoverContent}) => {
 PopoverComponent.propTypes = {
   // ownProps
   children: PropTypes.node,
-  popoverContent: PropTypes.string,
+  popoverContent: PropTypes.node,
 };
 
 export default withStyles(styles)(PopoverComponent);

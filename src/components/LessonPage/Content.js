@@ -13,7 +13,7 @@ const createMarkup = (lessonContent) => {
 const Content = ({course, lesson, language, isReadme}) => {
   const LoadableContent = Loadable({
     loader: () => getLessonContentPromise(course, lesson, language, isReadme),
-    loading: () => <div>Loading...</div>,
+    loading: ({error}) => error ? <div>Failed to load lesson!</div> : <div>Loading...</div>,
     render: (loaded) => <div dangerouslySetInnerHTML={createMarkup(loaded)}/>,
   });
   return <LoadableContent/>;

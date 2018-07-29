@@ -5,7 +5,6 @@ import LinkContainer from 'react-router-bootstrap/lib/LinkContainer';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Glyphicon from 'react-bootstrap/lib/Glyphicon';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
-import Loadable from 'react-loadable';
 import LevelIcon from '../LevelIcon';
 import PopoverComponent from '../PopoverComponent';
 import InstructionButton from '../InstructionButton';
@@ -13,7 +12,7 @@ import Flag from '../Flag';
 import {createCheckboxesKey} from '../../util';
 import {getLessonFrontmatter} from '../../resources/lessonFrontmatter';
 import {getLevel} from '../../resources/lessons';
-import {getLessonIntroPromise} from '../../resources/lessonContent';
+import LessonIntro from './LessonIntro';
 import {getTranslator} from '../../selectors/translate';
 import {onlyCheckedMainLanguage} from '../../selectors/filter';
 import {getNumberOfCheckedCheckboxes, getTotalNumberOfCheckboxes} from '../../selectors/checkboxes';
@@ -55,16 +54,11 @@ const LessonItem = ({
   const instructionButton = isStudentMode ? null :
     <InstructionButton {...{course, lesson, language, isReadme: true, onlyIcon: true, insideLink: true}} />;
 
-  const popoverButton = (popoverContent) => (
-    <PopoverComponent {...{popoverContent}}>
+  const popoverButton = (
+    <PopoverComponent popoverContent={<LessonIntro {...{course, lesson, language, isReadme: false}}/>}>
       <Glyphicon className={styles.popoverGlyph} glyph='info-sign'/>
     </PopoverComponent>
   );
-  const AsyncPopoverButton = Loadable({
-    loader: () => getLessonIntroPromise(course, lesson, language, false),
-    loading: () => <div>Loading...</div>,
-    render: (loaded) => popoverButton(loaded),
-  });
 
   return (
     <div>
@@ -76,7 +70,7 @@ const LessonItem = ({
           <Glyphicon glyph="new-window"/>
           <span className={styles.rightSide}>
             {instructionButton}
-            <AsyncPopoverButton/>
+            {popoverButton}
           </span>
         </ListGroupItem>
         :
@@ -89,7 +83,7 @@ const LessonItem = ({
             <Progress {...{checkedCheckboxes, totalCheckboxes}}/>
             <span className={styles.rightSide}>
               {instructionButton}
-              <AsyncPopoverButton/>
+              {popoverButton}
             </span>
           </ListGroupItem>
         </LinkContainer>

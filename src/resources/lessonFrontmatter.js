@@ -23,6 +23,7 @@ const lessonFrontmatterContext =
  *           author: 'Geir',
  *           translator: 'Kari',
  *           external: 'https://www.example.com/external', // doesn't always exist
+ *           file: 'astrokatt',
  *           path: '/scratch/astrokatt/astrokatt',
  *           key: './scratch/astrokatt/astrokatt.md',
  *         },
@@ -31,6 +32,7 @@ const lessonFrontmatterContext =
  *           level: 1,
  *           author: 'Gro',
  *           translator: 'Per',
+ *           file: 'README_nn',
  *           path: '/scratch/astrokatt/README_nn',
  *           key: './scratch/astrokatt/README_nn.md',
  *         },
@@ -62,7 +64,7 @@ const getData = memoize(
       if (language) {
         const isReadmeKey = file.startsWith('README') ? 1 : 0;
         const path = `/${course}/${lesson}/${file}`;
-        const lessonData = {title, level, author, translator, external, path, key};
+        const lessonData = {title, level, author, translator, external, file,  path, key};
         assignDeep(lessons, [course, lesson, language, isReadmeKey], lessonData);
       } else {
         console.warn('WARNING: The lesson', key, 'did not specify language, so lesson will not be used.');

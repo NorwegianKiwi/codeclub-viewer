@@ -18,7 +18,8 @@ import {getLanguageIndependentCoursePath} from '../../resources/courses';
 const CourseItem = ({course, language, showLessonCount, coursePath, onlyCheckedMainLanguage}) => {
   const courseTitle = getCourseTitle(course, language);
   const externalLink = getCourseExternalLink(course, language);
-  const popoverContent = getCourseIntro(course, language);
+  const courseIntro = getCourseIntro(course, language);
+  const popoverContent = courseIntro ? <div dangerouslySetInnerHTML={{__html: courseIntro}}/> : null;
 
   const popoverButton = popoverContent ?
     <PopoverComponent {...{popoverContent}}>

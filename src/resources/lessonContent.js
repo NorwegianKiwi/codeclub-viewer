@@ -10,15 +10,15 @@ import {extractFirstPartOfHtml} from '../util';
 //const lessonContentContext =
 //  require.context('lessonSrc/', true, /^[.][/][^/]+[/](?!playlists[/])[^/]+[/][^.]+[.]md$/);
 
-// function delayPromise(duration) {
-//   return function(...args){
-//     return new Promise(function(resolve, reject){
-//       setTimeout(function(){
-//         resolve(...args);
-//       }, duration);
-//     });
-//   };
-// }
+function delayPromise(duration) {
+  return function(...args){
+    return new Promise(function(resolve, reject){
+      setTimeout(function(){
+        resolve(...args);
+      }, duration);
+    });
+  };
+}
 
 
 /**
@@ -32,7 +32,7 @@ import {extractFirstPartOfHtml} from '../util';
 export const getLessonContentPromise = (course, lesson, language, isReadme) => {
   const {file} = getLessonFrontmatter(course, lesson, language, isReadme);
   return file ?
-    import(`lessonSrc/${course}/${lesson}/${file}.md`) /*.then(delayPromise(5000))*/ :
+    import(`lessonSrc/${course}/${lesson}/${file}.md`).then(delayPromise(5000)) :
     Promise.reject(`Could not retrieve content for ${course}/${lesson}/${file}`);
 };
 
