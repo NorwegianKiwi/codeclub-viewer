@@ -8,8 +8,10 @@ export default {
       1: 'Introduction',
       2: 'Beginner',
       3: 'Experienced',
-      4: 'Expert'
-    }
+      4: 'Expert',
+    },
+    loading: 'Loading',
+    loadingfailed: 'Failed to load content',
   },
   head: {
     title: 'Code club',

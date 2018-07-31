@@ -1,6 +1,7 @@
 @import '../styles/variables';
 
 .popover {
+  width: 100%;
   max-width: $screen-xs-max;
   img {
     width: 100%;
@@ -15,13 +16,5 @@
       max-width: 100px;
       max-height: 125px;
     }
-  }
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  img {
-    margin-right: 15px;
   }
 }

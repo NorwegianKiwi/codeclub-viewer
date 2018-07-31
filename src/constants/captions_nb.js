@@ -10,8 +10,10 @@ export default {
       1: 'Introduksjon',
       2: 'Nybegynner',
       3: 'Erfaren',
-      4: 'Ekspert'
-    }
+      4: 'Ekspert',
+    },
+    loading: 'Laster',
+    loadingfailed: 'Klarte ikke laste innhold',
   },
   head: {
     title: 'Kodeklubben',
