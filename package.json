@@ -34,6 +34,9 @@
   },
   "homepage": "https://github.com/NorwegianKiwi/codeclub-viewer#readme",
   "babel": {
+    "plugins": [
+      "react-loadable/babel"
+    ],
     "presets": [
       "es2015",
       "react",
