@@ -67,5 +67,16 @@ export const processCourseInfo = (content, options) => {
   let parsedContent = parser(content);
   parsedContent = walkParsedHtmlRecursively(parsedContent, options);
   content = render(parsedContent);
+  // TODO: Instead of "render", perhaps make a function that takes the AST tree and renders into React components?
+  //       Compare size of parse5 (https://github.com/inikulin/parse5)
+  //       and posthtml-parser (https://github.com/posthtml/posthtml-parser)
+  //       Both should be creating AST trees.
+  //       See https://github.com/utatti/react-render-html/blob/master/index.js for how it can be done.
+  //       Since we want to manipulate the AST tree before creating react components, we probably don't want
+  //       to use react-render-html directly.
+  //       But the code shows how to render AST trees using React.createElement.
+  //       This way we can probably avoid using dangerouslySetInnerHtml for courseInfo and content!
+  //       The code that converts AST tree to React could probably also exchange a-tags with certain hrefs into
+  //       NavLink nodes.
   return content;
 };
