@@ -127,6 +127,7 @@ const renderScratchBlocks = (content, styles) => {
 
   let returnContent = content;
   replace.forEach(r => {
+    // \s=whitespace, \S=not whitespace, \s\S=any character including newline (using .* would not include newline)
     const re = new RegExp(r.start + '[\\s\\S]*?' + r.end, 'g');
 
     let blocks = content.match(re);

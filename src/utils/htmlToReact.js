@@ -1,9 +1,10 @@
-var React = require('react');
-import parser from 'posthtml-parser';
-var convertAttr = require('react-attr-converter');
-var styleParser = require('./lib/style-parser');
+// Taken from https://github.com/utatti/react-render-html/blob/master/index.js
+import React from 'react';
+import convertAttr from 'react-attr-converter';
+import htmlParser from 'parse5';
+import styleParser from './styleParser';
 
-function renderNode(node, key) {
+const renderNode = (node, key) => {
   if (node.nodeName === '#text') {
     return node.value;
   }
@@ -12,8 +13,8 @@ function renderNode(node, key) {
     return node.value;
   }
 
-  var attr = node.attrs.reduce(function (result, attr) {
-    var name = convertAttr(attr.name);
+  const attr = node.attrs.reduce(function (result, attr) {
+    const name = convertAttr(attr.name);
     result[name] = name === 'style' ? styleParser(attr.value) : attr.value;
     return result;
   }, {key: key});
@@ -27,20 +28,20 @@ function renderNode(node, key) {
     return React.createElement('script', attr);
   }
 
-  var children = node.childNodes.map(renderNode);
+  const children = node.childNodes.map(renderNode);
   return React.createElement(node.tagName, attr, children);
-}
+};
 
-function renderHTML(html) {
-  var htmlAST = htmlParser.parseFragment(html);
+const htmlToReact = (html) => {
+  const htmlAST = htmlParser.parseFragment(html);
 
   if (htmlAST.childNodes.length === 0) {
     return null;
   }
 
-  var result = htmlAST.childNodes.map(renderNode);
+  const result = htmlAST.childNodes.map(renderNode);
 
   return result.length === 1 ? result[0] : result;
-}
+};
 
-module.exports = renderHTML;
+export default htmlToReact;

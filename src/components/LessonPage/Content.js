@@ -5,6 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 import styles from './Content.scss';
 import {processContent} from '../../utils/processContent';
+import htmlToReact from '../../utils/htmlToReact';
 import {getLessonContent} from '../../resources/lessonContent';
 
 const createMarkup = (lessonContent) => {
@@ -22,7 +23,8 @@ const createMarkup = (lessonContent) => {
 
 const Content = ({course, lesson, language, isReadme}) => {
   const lessonContent = getLessonContent(course, lesson, language, isReadme);
-  return <div dangerouslySetInnerHTML={createMarkup(lessonContent)}/>;
+  //return <div dangerouslySetInnerHTML={createMarkup(lessonContent)}/>;
+  return <div>{htmlToReact(processContent(lessonContent, styles))}</div>;
 };
 Content.propTypes = {
   // ownProps
