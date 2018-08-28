@@ -1,0 +1,1012 @@
+<section class="intro">
+  <h1 class="intro">Introduksjon</h1>
+  <p>Katten vår har så lyst å være en astronaut, la oss se om vi kan hjelpe
+    ham? Underveis vil vi lære hvordan vi flytter figurer rundt på
+    skjermen, og hvordan katter blir påvirket av gravitasjonskreftene fra
+    jorden.</p>
+  <figure><img src="astrokatt.png" alt="Bilde av en katt i verdensrommet"></figure>
+</section>
+<section class="Content__activity__5UXZs">
+  <h1 class="Content__activity__5UXZs">Steg 1: En flyvende katt</h1>
+  <p>Vi begynner prosjektet vårt med å få katten til å fly!</p>
+  <section class="Content__check__1k3Ap">
+    <h2 class="Content__check__1k3Ap"><img src="/CCV-assets/check.15ac74.svg" alt="check">Sjekkliste</h2>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_0"><label for="cbx_0"> Start et nytt prosjekt. Du vil se en katt som venter på å bli
+          programmert!</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_1"><label for="cbx_1"> Prøv å klikk på de blå klossene midt på skjermen. For eksempel, om
+          du klikker på</label></p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="88.3564453125" height="25"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 81.3564453125 0 L 84.3564453125 3 L 84.3564453125 19 L 81.3564453125 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 15.693359375 0 A 6.5 6.5 0 0 1 15.693359375 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">10</text></g><text x="0" y="10" class="sb-label" transform="translate(56.193359375 5)">steg</text></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+        <p>skal du se at katten flytter litt på seg, og om du klikker på</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="124.2314453125" height="25"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 117.2314453125 0 L 120.2314453125 3 L 120.2314453125 19 L 117.2314453125 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnRight" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 15.693359375 0 A 6.5 6.5 0 0 1 15.693359375 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">15</text></g><text x="0" y="10" class="sb-label" transform="translate(80.1787109375 5)">grader</text></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+        <p>vil den snu seg! Disse klossene er kommandoer vi kan gi til
+          katten!</p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_2"><label for="cbx_2"> Legg merke til at at over de blå klossene er det flere kategorier av
+          kommandoer i forskjellige farger, for eksempel
+          <code class="Content__blocklooks__2cuL9">Utseende</code> og <code class="Content__blocksound__1NnAv">Lyd</code>. Klikk på disse
+          kategoriene og prøv noen av klossene du finner!</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_3"><label for="cbx_3"> For å sette sammen flere kommandoer til et skript kan du dra klosser
+          til det store tomme området til høyre på skjermen.</label></p>
+        <p>Prøv å pusle sammen disse klossene (bruk fargene for å finne
+          riktig kategori):</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="139.2314453125" height="120"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 90.994140625 10 L 93.994140625 13 L 93.994140625 35 L 90.994140625 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 18)">når</text><use xlink:href="#greenFlag" transform="translate(26.9921875 12)"/><text x="0" y="10" class="sb-label" transform="translate(50.9921875 18)">klikkes</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 80 0 L 83 3 L 83 19 L 80 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 64 L 17 66 L 80 66 L 83 69 L 83 79 L 80 82 L 3 82 L 0 79" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">for</text><text x="0" y="10" class="sb-label" transform="translate(25.078125 5)">alltid</text><use xlink:href="#loopArrow" transform="translate(68 79)"/><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 81.3564453125 0 L 84.3564453125 3 L 84.3564453125 19 L 81.3564453125 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 15.693359375 0 A 6.5 6.5 0 0 1 15.693359375 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">10</text></g><text x="0" y="10" class="sb-label" transform="translate(56.193359375 5)">steg</text></g><g transform="translate(0 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 117.2314453125 0 L 120.2314453125 3 L 120.2314453125 19 L 117.2314453125 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnRight" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 15.693359375 0 A 6.5 6.5 0 0 1 15.693359375 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">15</text></g><text x="0" y="10" class="sb-label" transform="translate(80.1787109375 5)">grader</text></g></g></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__flag__-k25x">
+    <h2 class="Content__flag__-k25x"><img src="/CCV-assets/flag.4a58cd.svg" alt="flag">Test prosjektet</h2>
+    <p>Legg merke til at den første klossen sier at noe skal skje når vi
+      klikker et grønt flagg. Over vinduet med katten til venstre er det et
+      grønt flagg. <strong>Klikk på det!</strong></p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_4"><label for="cbx_4"> Du skal se at katten flytter seg rundt i en sirkel. Les koden du
+          laget en gang til. Skjønner du hvorfor katten går i sirkel?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_5"><label for="cbx_5"> Prøv å endre tallene i koden din. Kan du få katten til å gå saktere?
+          I større sirkler?</label></p>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__check__1k3Ap">
+    <h2 class="Content__check__1k3Ap"><img src="/CCV-assets/check.15ac74.svg" alt="check">Sjekkliste</h2>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_6"><label for="cbx_6"> Nå skal vi endre litt på koden slik at vi kan kontrollere hvordan
+          katten beveger seg. I kategorien <code class="Content__blocksensing__5BEX6">Sansning</code> finnes en
+          kloss som reagerer når en tast er trykket. Den kan vi bruke til å
+          styre katten med piltastene.</label></p>
+        <p>Bytt ut klossene i koden din slik at den blir seende slik ut:</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="221.91015625" height="268"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 90.994140625 10 L 93.994140625 13 L 93.994140625 35 L 90.994140625 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 18)">når</text><use xlink:href="#greenFlag" transform="translate(26.9921875 12)"/><text x="0" y="10" class="sb-label" transform="translate(50.9921875 18)">klikkes</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 80 0 L 83 3 L 83 19 L 80 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 212 L 17 214 L 80 214 L 83 217 L 83 227 L 80 230 L 3 230 L 0 227" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">for</text><text x="0" y="10" class="sb-label" transform="translate(25.078125 5)">alltid</text><use xlink:href="#loopArrow" transform="translate(68 227)"/><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 190.6279296875 0 L 193.6279296875 3 L 193.6279296875 23 L 190.6279296875 26 L 42 26 L 39 29 L 31 29 L 28 26 L 17 26 L 15 28 L 15 46 L 17 48 L 190.6279296875 48 L 193.6279296875 51 L 193.6279296875 61 L 190.6279296875 64 L 27 64 L 24 67 L 16 67 L 13 64 L 3 64 L 0 61" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 6)">hvis</text><g transform="translate(31.40625 2)"><path d="M 10.5 0 L 145.7216796875 0 156.2216796875 10.5 L 156.2216796875 10.5 145.7216796875 21 L 10.5 21 0 10.5 L 0 10.5 10.5 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(11 4)">tast</text><g transform="translate(34.638671875 3)"><g width="64.615234375" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="64.615234375" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pil høyre</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(54.615234375 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(103.25390625 4)">trykket?</text></g><g transform="translate(15 26)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 110.634765625 0 L 113.634765625 3 L 113.634765625 19 L 110.634765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnRight" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(73.58203125 5)">grader</text></g></g></g><g transform="translate(0 64)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 199.91015625 0 L 202.91015625 3 L 202.91015625 23 L 199.91015625 26 L 42 26 L 39 29 L 31 29 L 28 26 L 17 26 L 15 28 L 15 46 L 17 48 L 199.91015625 48 L 202.91015625 51 L 202.91015625 61 L 199.91015625 64 L 27 64 L 24 67 L 16 67 L 13 64 L 3 64 L 0 61" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 6)">hvis</text><g transform="translate(31.40625 2)"><path d="M 10.5 0 L 155.00390625 0 165.50390625 10.5 L 165.50390625 10.5 155.00390625 21 L 10.5 21 0 10.5 L 0 10.5 10.5 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(11 4)">tast</text><g transform="translate(34.638671875 3)"><g width="73.8974609375" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="73.8974609375" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pil venstre</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(63.8974609375 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(112.5361328125 4)">trykket?</text></g><g transform="translate(15 26)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 110.634765625 0 L 113.634765625 3 L 113.634765625 19 L 110.634765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnLeft" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(73.58203125 5)">grader</text></g></g></g><g transform="translate(0 128)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 181.0771484375 0 L 184.0771484375 3 L 184.0771484375 23 L 181.0771484375 26 L 42 26 L 39 29 L 31 29 L 28 26 L 17 26 L 15 28 L 15 46 L 17 48 L 181.0771484375 48 L 184.0771484375 51 L 184.0771484375 61 L 181.0771484375 64 L 27 64 L 24 67 L 16 67 L 13 64 L 3 64 L 0 61" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 6)">hvis</text><g transform="translate(31.40625 2)"><path d="M 10.5 0 L 136.1708984375 0 146.6708984375 10.5 L 146.6708984375 10.5 136.1708984375 21 L 10.5 21 0 10.5 L 0 10.5 10.5 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(11 4)">tast</text><g transform="translate(34.638671875 3)"><g width="55.064453125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="55.064453125" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pil opp</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(45.064453125 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(93.703125 4)">trykket?</text></g><g transform="translate(15 26)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 74.759765625 0 L 77.759765625 3 L 77.759765625 19 L 74.759765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(49.5966796875 5)">steg</text></g></g></g></g></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__flag__-k25x">
+    <h2 class="Content__flag__-k25x"><img src="/CCV-assets/flag.4a58cd.svg" alt="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_7"><label for="cbx_7"> Kan du styre katten rundt ved å bruke piltastene?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_8"><label for="cbx_8"> Forstår du hvordan katten kontrolleres?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_9"><label for="cbx_9"> Kan du få katten til å fly raskere eller saktere ved å endre i koden?</label></p>
+      </li>
+    </ul>
+  </section>
+</section>
+<section class="Content__activity__5UXZs">
+  <h1 class="Content__activity__5UXZs">Steg 2: Ut i verdensrommet!</h1>
+  <p>Nå skal vi sende den flyvende katten ut i verdensrommet.</p>
+  <section class="Content__check__1k3Ap">
+    <h2 class="Content__check__1k3Ap"><img src="/CCV-assets/check.15ac74.svg" alt="check">Sjekkliste</h2>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_10"><label for="cbx_10"> Klikk på <img src="../bilder/velg-bakgrunn.png" alt="Velg ny bakgrunn"> nederst
+          til venstre på skjermen for å hente inn en ny bakgrunn. Velg
+          bakgrunnen <code>stars</code> som du finner i kategorien <code>Romfart</code>.</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_11"><label for="cbx_11"> Vi skal også gi katten en liten oksygentank, siden den flyr rundt
+          ute i rommet. Klikk på katten i figurvinduet og deretter på fanen
+          <code>Drakter</code> øverst på skjermen.</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_12"><label for="cbx_12"> Velg først en litt lys farge. Klikk deretter på Ellipse-verktøyet
+          til høyre på skjermen, og tegn en ellipse rundt hodet på katten.</label></p>
+        <figure><img src="katt_oksygentank.png" alt="Bilde av katt med oksygentank"></figure>
+      </li>
+    </ul>
+    <p>Til slutt lager vi også en jordklode, som katten kan fly rundt.</p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C"><input type="checkbox" id="cbx_13"><label for="cbx_13"> Klikk på fanen <code>Skript</code> og deretter på
+        <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">. Velg
+        jordklodefiguren <code>Romfart/Earth</code>. Plasser denne litt på siden av skjermen.</label></li>
+    </ul>
+  </section>
+  <section class="Content__flag__-k25x">
+    <h2 class="Content__flag__-k25x"><img src="/CCV-assets/flag.4a58cd.svg" alt="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C"><input type="checkbox" id="cbx_14"><label for="cbx_14"> Flyr katten rundt omkring i verdensrommet?</label></li>
+    </ul>
+  </section>
+</section>
+<section class="Content__activity__5UXZs">
+  <h1 class="Content__activity__5UXZs">Steg 3: Litt mer ekte ...</h1>
+  <p>Vi skal nå legge på noen effekter som gjør at spillet virker litt mer
+    realistisk.</p>
+  <section class="Content__check__1k3Ap">
+    <h2 class="Content__check__1k3Ap"><img src="/CCV-assets/check.15ac74.svg" alt="check">Sjekkliste</h2>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_15"><label for="cbx_15"> Først kan vi få jordkloden til å rotere. Dette er enkelt, vi har jo
+          allerede gjort det for katten! Pass på at jordkloden er merket i
+          figurlisten, og lag deretter dette skriptet:</label></p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="132.634765625" height="98"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 90.994140625 10 L 93.994140625 13 L 93.994140625 35 L 90.994140625 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 18)">når</text><use xlink:href="#greenFlag" transform="translate(26.9921875 12)"/><text x="0" y="10" class="sb-label" transform="translate(50.9921875 18)">klikkes</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 80 0 L 83 3 L 83 19 L 80 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 42 L 17 44 L 80 44 L 83 47 L 83 57 L 80 60 L 3 60 L 0 57" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">for</text><text x="0" y="10" class="sb-label" transform="translate(25.078125 5)">alltid</text><use xlink:href="#loopArrow" transform="translate(68 57)"/><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 110.634765625 0 L 113.634765625 3 L 113.634765625 19 L 110.634765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnRight" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">1</text></g><text x="0" y="10" class="sb-label" transform="translate(73.58203125 5)">grader</text></g></g></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_16"><label for="cbx_16"> Videre skal vi gjøre det slik at det ser ut som om katten flyr mot
+          jorda. Det gjør vi ved å endre størrelsen slik at katten blir mindre
+          jo nærmere den kommer jordkloden.</label></p>
+        <p>Klikk på katten i figurlisten. Legg <code class="Content__blocklooks__2cuL9">sett størrelse til</code> nederst i <code class="Content__blockcontrol__fUIYQ">for alltid</code>-løkka,
+          slik at størrelsen på katten er avhengig av avstanden til
+          jordkloden:</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="249.0166015625" height="294"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 90.994140625 10 L 93.994140625 13 L 93.994140625 35 L 90.994140625 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 18)">når</text><use xlink:href="#greenFlag" transform="translate(26.9921875 12)"/><text x="0" y="10" class="sb-label" transform="translate(50.9921875 18)">klikkes</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 80 0 L 83 3 L 83 19 L 80 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 238 L 17 240 L 80 240 L 83 243 L 83 253 L 80 256 L 3 256 L 0 253" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">for</text><text x="0" y="10" class="sb-label" transform="translate(25.078125 5)">alltid</text><use xlink:href="#loopArrow" transform="translate(68 253)"/><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 190.6279296875 0 L 193.6279296875 3 L 193.6279296875 23 L 190.6279296875 26 L 42 26 L 39 29 L 31 29 L 28 26 L 17 26 L 15 28 L 15 46 L 17 48 L 190.6279296875 48 L 193.6279296875 51 L 193.6279296875 61 L 190.6279296875 64 L 27 64 L 24 67 L 16 67 L 13 64 L 3 64 L 0 61" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 6)">hvis</text><g transform="translate(31.40625 2)"><path d="M 10.5 0 L 145.7216796875 0 156.2216796875 10.5 L 156.2216796875 10.5 145.7216796875 21 L 10.5 21 0 10.5 L 0 10.5 10.5 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(11 4)">tast</text><g transform="translate(34.638671875 3)"><g width="64.615234375" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="64.615234375" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pil høyre</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(54.615234375 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(103.25390625 4)">trykket?</text></g><g transform="translate(15 26)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 110.634765625 0 L 113.634765625 3 L 113.634765625 19 L 110.634765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnRight" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(73.58203125 5)">grader</text></g></g></g><g transform="translate(0 64)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 199.91015625 0 L 202.91015625 3 L 202.91015625 23 L 199.91015625 26 L 42 26 L 39 29 L 31 29 L 28 26 L 17 26 L 15 28 L 15 46 L 17 48 L 199.91015625 48 L 202.91015625 51 L 202.91015625 61 L 199.91015625 64 L 27 64 L 24 67 L 16 67 L 13 64 L 3 64 L 0 61" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 6)">hvis</text><g transform="translate(31.40625 2)"><path d="M 10.5 0 L 155.00390625 0 165.50390625 10.5 L 165.50390625 10.5 155.00390625 21 L 10.5 21 0 10.5 L 0 10.5 10.5 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(11 4)">tast</text><g transform="translate(34.638671875 3)"><g width="73.8974609375" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="73.8974609375" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pil venstre</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(63.8974609375 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(112.5361328125 4)">trykket?</text></g><g transform="translate(15 26)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 110.634765625 0 L 113.634765625 3 L 113.634765625 19 L 110.634765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">vend</text><use xlink:href="#turnLeft" transform="translate(34.9853515625 6)"/><g transform="translate(53.9853515625 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(73.58203125 5)">grader</text></g></g></g><g transform="translate(0 128)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 181.0771484375 0 L 184.0771484375 3 L 184.0771484375 23 L 181.0771484375 26 L 42 26 L 39 29 L 31 29 L 28 26 L 17 26 L 15 28 L 15 46 L 17 48 L 181.0771484375 48 L 184.0771484375 51 L 184.0771484375 61 L 181.0771484375 64 L 27 64 L 24 67 L 16 67 L 13 64 L 3 64 L 0 61" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 6)">hvis</text><g transform="translate(31.40625 2)"><path d="M 10.5 0 L 136.1708984375 0 146.6708984375 10.5 L 146.6708984375 10.5 136.1708984375 21 L 10.5 21 0 10.5 L 0 10.5 10.5 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(11 4)">tast</text><g transform="translate(34.638671875 3)"><g width="55.064453125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="55.064453125" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">pil opp</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(45.064453125 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(93.703125 4)">trykket?</text></g><g transform="translate(15 26)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 74.759765625 0 L 77.759765625 3 L 77.759765625 19 L 74.759765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(49.5966796875 5)">steg</text></g></g></g><g transform="translate(0 192)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 227.0166015625 0 L 230.0166015625 3 L 230.0166015625 23 L 227.0166015625 26 L 27 26 L 24 29 L 16 29 L 13 26 L 3 26 L 0 23 Z" class="sb-looks sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 7)">sett</text><text x="0" y="10" class="sb-label" transform="translate(29.619140625 7)">størrelse</text><text x="0" y="10" class="sb-label" transform="translate(79.4296875 7)">til</text><g transform="translate(93.986328125 3)"><path d="M 10 0 L 108.1982421875 0 A 10 10 0 0 1 108.1982421875 20 L 10 20 A 10 10 0 0 1 10 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(8 4)">avstand</text><text x="0" y="10" class="sb-label" transform="translate(52.5908203125 4)">til</text><g transform="translate(67.1474609375 3)"><g width="46.05078125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="46.05078125" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">Earth</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(36.05078125 5)"/></g></g><text x="0" y="10" class="sb-label" transform="translate(216.1845703125 7)">%</text></g></g></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__flag__-k25x">
+    <h2 class="Content__flag__-k25x"><img src="/CCV-assets/flag.4a58cd.svg" alt="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_17"><label for="cbx_17"> Blir katten mindre når den nærmer seg jorda?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_18"><label for="cbx_18"> Ser det ut som om den flyr ned mot jorda, og kommer tilbake til oss?</label></p>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__check__1k3Ap">
+    <h2 class="Content__check__1k3Ap"><img src="/CCV-assets/check.15ac74.svg" alt="check">Sjekkliste</h2>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_19"><label for="cbx_19"> For å gjøre det enda mer realistisk vil vi forandre hvor langt
+          katten flytter seg med. Når den er langt unna oss flytter den seg
+          ikke like mange steg. Bytt ut</label></p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="81.759765625" height="25"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 74.759765625 0 L 77.759765625 3 L 77.759765625 19 L 74.759765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">5</text></g><text x="0" y="10" class="sb-label" transform="translate(49.5966796875 5)">steg</text></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+        <p>med</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="228.208984375" height="33"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 221.208984375 0 L 224.208984375 3 L 224.208984375 27 L 221.208984375 30 L 27 30 L 24 33 L 16 33 L 13 30 L 3 30 L 0 27 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 9)">gå</text><g transform="translate(30 3)"><path d="M 12 0 L 150.0458984375 0 A 12 12 0 0 1 150.0458984375 24 L 12 24 A 12 12 0 0 1 12 0 Z" class="sb-operators sb-bevel"/><g transform="translate(4 2)"><path d="M 10 0 L 108.1982421875 0 A 10 10 0 0 1 108.1982421875 20 L 10 20 A 10 10 0 0 1 10 0 Z" class="sb-sensing sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(8 4)">avstand</text><text x="0" y="10" class="sb-label" transform="translate(52.5908203125 4)">til</text><g transform="translate(67.1474609375 3)"><g width="46.05078125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="46.05078125" height="14" class="sb-sensing sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">Earth</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(36.05078125 5)"/></g></g><text x="0" y="10" class="sb-label" transform="translate(126.1982421875 6)">/</text><g transform="translate(135.8525390625 5)"><path d="M 6.5 0 L 15.693359375 0 A 6.5 6.5 0 0 1 15.693359375 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">50</text></g></g><text x="0" y="10" class="sb-label" transform="translate(196.0458984375 9)">steg</text></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+        <p>Denne klossen er litt komplisert fordi den er satt sammen av tre
+          forskjellige klosser. Se på fargene så finner du de riktige
+          klossene.</p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_20"><label for="cbx_20"> Av og til vil katten fly bak jordkloden. For å slippe det kan du
+          legge klossen <code class="Content__blocklooks__2cuL9">legg foran</code> først i katten sitt
+          skript.</label></p>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__flag__-k25x">
+    <h2 class="Content__flag__-k25x"><img src="/CCV-assets/flag.4a58cd.svg" alt="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_21"><label for="cbx_21"> Flyr katten rundt omkring i verdensrommet? Kan du få den til å lande
+          på jorda?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_22"><label for="cbx_22"> Prøv også å flytte jordkloden til andre steder på skjermen. Blir det
+          annerledes å fly med katten nå?</label></p>
+      </li>
+    </ul>
+  </section>
+</section>
+<section class="Content__activity__5UXZs">
+  <h1 class="Content__activity__5UXZs">Steg 4: Gravitasjon</h1>
+  <p>Gravitasjon er kraften som jorda trekker på alle katter og mennesker
+    med. Vi kan la astrokatten vår bli påvirket av gravitasjonen også.</p>
+  <section class="Content__check__1k3Ap">
+    <h2 class="Content__check__1k3Ap"><img src="/CCV-assets/check.15ac74.svg" alt="check">Sjekkliste</h2>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_23"><label for="cbx_23"> Lag et nytt skript på katten. Du kan bare legge klossene ved siden
+          av det skriptet du allerede har laget. Skriptet skal se slik ut:</label></p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="139.6787109375" height="142"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 90.994140625 10 L 93.994140625 13 L 93.994140625 35 L 90.994140625 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 18)">når</text><use xlink:href="#greenFlag" transform="translate(26.9921875 12)"/><text x="0" y="10" class="sb-label" transform="translate(50.9921875 18)">klikkes</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 132.6787109375 0 L 135.6787109375 3 L 135.6787109375 19 L 132.6787109375 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><text x="0" y="10" class="sb-label" transform="translate(22.4755859375 5)">til</text><text x="0" y="10" class="sb-label" transform="translate(37.0322265625 5)">x:</text><g transform="translate(49.4111328125 4)"><path d="M 6.5 0 L 28.6767578125 0 A 6.5 6.5 0 0 1 28.6767578125 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">-200</text></g><text x="0" y="10" class="sb-label" transform="translate(88.587890625 5)">y:</text><g transform="translate(100.888671875 4)"><path d="M 6.5 0 L 22.2900390625 0 A 6.5 6.5 0 0 1 22.2900390625 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">150</text></g></g><g transform="translate(2 60)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 80 0 L 83 3 L 83 19 L 80 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 64 L 17 66 L 80 66 L 83 69 L 83 79 L 80 82 L 3 82 L 0 79" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">for</text><text x="0" y="10" class="sb-label" transform="translate(25.078125 5)">alltid</text><use xlink:href="#loopArrow" transform="translate(68 79)"/><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 102.0009765625 0 L 105.0009765625 3 L 105.0009765625 19 L 102.0009765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">pek</text><text x="0" y="10" class="sb-label" transform="translate(28.8134765625 5)">mot</text><g transform="translate(52.9501953125 4)"><g width="46.05078125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="46.05078125" height="14" class="sb-motion sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">Earth</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(36.05078125 5)"/></g></g><g transform="translate(0 22)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 74.759765625 0 L 77.759765625 3 L 77.759765625 19 L 74.759765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">1</text></g><text x="0" y="10" class="sb-label" transform="translate(49.5966796875 5)">steg</text></g></g></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_24"><label for="cbx_24"> Når du tester programmet ditt ved å klikke på det grønne flagget,
+          vil du se at katten svever mot jordkloden. Gravitasjonen trekker på
+          den!</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_25"><label for="cbx_25"> MEN, vi har et problem: Vi kan ikke lengre styre katten! Hva har skjedd?</label></p>
+        <p>I det nye skriptet sier vi at katten <code class="Content__blockcontrol__fUIYQ">for alltid</code>
+          skal <code class="Content__blockmotion__2PR6M">peke mot</code> jordkloden. Da hjelper det jo ikke
+          at vi i det andre skriptet sier at katten skal snu seg.</p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_26"><label for="cbx_26"> Det er ingen kommando i Scratch for å flytte en figur mot en
+          annen. Derfor må vi peke katten mot jordkloden og deretter flytte
+          den. Men vi kan få programmet til å virke igjen, hvis vi bare husker
+          hvilken retning katten pekte før vi snudde den.</label></p>
+        <p>For at programmer skal huske ting bruker vi variabler. Lag en
+          variabel ved å klikke på <code class="Content__blockdata__2e9Xb">Data</code>-kategorien og deretter
+          på <code>Lag en variabel</code>. Kall variabelen <code>katteretning</code>.</p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_27"><label for="cbx_27"> Vi kan nå bruke denne variabelen til å huske hvilken retning katten
+          pekte. Endre skriptet ditt ved å legge til to nye klosser:</label></p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="209.611328125" height="194"><defs><filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="1" dy="1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"/><feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"/><feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"/><feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"/><feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"/><feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"/><feOffset result="offset-7" in="blur-1" dx="1" dy="1"/><feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"/><feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"/><feMerge result="merge-10"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-5"/><feMergeNode in="comp-9"/></feMerge></filter><filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%"><feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"/><feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"/><feMerge result="merge-3"><feMergeNode in="SourceGraphic"/><feMergeNode in="comp-2"/></feMerge></filter><path d="M1.504 21L0 19.493 4.567 0h1.948l-.5 2.418s1.002-.502 3.006 0c2.006.503 3.008 2.01 6.517 2.01 3.508 0 4.463-.545 4.463-.545l-.823 9.892s-2.137 1.005-5.144.696c-3.007-.307-3.007-2.007-6.014-2.51-3.008-.502-4.512.503-4.512.503L1.504 21z" fill="#3f8d15" id="greenFlag"/><path d="M6.724 0C3.01 0 0 2.91 0 6.5c0 2.316 1.253 4.35 3.14 5.5H5.17v-1.256C3.364 10.126 2.07 8.46 2.07 6.5 2.07 4.015 4.152 2 6.723 2c1.14 0 2.184.396 2.993 1.053L8.31 4.13c-.45.344-.398.826.11 1.08L15 8.5 13.858.992c-.083-.547-.514-.714-.963-.37l-1.532 1.172A6.825 6.825 0 0 0 6.723 0z" fill="#fff" id="turnRight"/><path d="M3.637 1.794A6.825 6.825 0 0 1 8.277 0C11.99 0 15 2.91 15 6.5c0 2.316-1.253 4.35-3.14 5.5H9.83v-1.256c1.808-.618 3.103-2.285 3.103-4.244 0-2.485-2.083-4.5-4.654-4.5-1.14 0-2.184.396-2.993 1.053L6.69 4.13c.45.344.398.826-.11 1.08L0 8.5 1.142.992c.083-.547.514-.714.963-.37l1.532 1.172z" fill="#fff" id="turnLeft"/><path d="M0 0L4 4L0 8Z" fill="#111" id="addInput"/><path d="M4 0L4 8L0 4Z" fill="#111" id="delInput"/><g id="loopArrow"><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#000" opacity="0.3"/><path d="M8 0l2 -2l0 -3l3 0l-4 -5l-4 5l3 0l0 3l-8 0l0 2" fill="#fff" opacity="0.9" transform="translate(-1 -1)"/></g></defs><g><g transform="translate(0 0)"><g transform="translate(2 0)"><path d="M 0 12 L 0 12 A 80 80 0 0 1 80 10 L 90.994140625 10 L 93.994140625 13 L 93.994140625 35 L 90.994140625 38 L 27 38 L 24 41 L 16 41 L 13 38 L 3 38 L 0 35 Z" class="sb-events sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 18)">når</text><use xlink:href="#greenFlag" transform="translate(26.9921875 12)"/><text x="0" y="10" class="sb-label" transform="translate(50.9921875 18)">klikkes</text></g><g transform="translate(2 38)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 132.6787109375 0 L 135.6787109375 3 L 135.6787109375 19 L 132.6787109375 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><text x="0" y="10" class="sb-label" transform="translate(22.4755859375 5)">til</text><text x="0" y="10" class="sb-label" transform="translate(37.0322265625 5)">x:</text><g transform="translate(49.4111328125 4)"><path d="M 6.5 0 L 28.6767578125 0 A 6.5 6.5 0 0 1 28.6767578125 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">-200</text></g><text x="0" y="10" class="sb-label" transform="translate(88.587890625 5)">y:</text><g transform="translate(100.888671875 4)"><path d="M 6.5 0 L 22.2900390625 0 A 6.5 6.5 0 0 1 22.2900390625 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">150</text></g></g><g transform="translate(2 60)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 80 0 L 83 3 L 83 19 L 80 22 L 42 22 L 39 25 L 31 25 L 28 22 L 17 22 L 15 24 L 15 116 L 17 118 L 80 118 L 83 121 L 83 131 L 80 134 L 3 134 L 0 131" class="sb-control sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">for</text><text x="0" y="10" class="sb-label" transform="translate(25.078125 5)">alltid</text><use xlink:href="#loopArrow" transform="translate(68 131)"/><g transform="translate(15 22)"><g transform="translate(0 0)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 187.611328125 0 L 190.611328125 3 L 190.611328125 23 L 187.611328125 26 L 27 26 L 24 29 L 16 29 L 13 26 L 3 26 L 0 23 Z" class="sb-variables sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 7)">sett</text><g transform="translate(30 6)"><g width="82.61328125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="82.61328125" height="14" class="sb-variables sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">katteretning</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(72.61328125 5)"/></g><text x="0" y="10" class="sb-label" transform="translate(116.61328125 7)">til</text><g transform="translate(131.169921875 3)"><path d="M 10 0 L 43.44140625 0 A 10 10 0 0 1 43.44140625 20 L 10 20 A 10 10 0 0 1 10 0 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(8 4)">retning</text></g></g><g transform="translate(0 26)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 102.0009765625 0 L 105.0009765625 3 L 105.0009765625 19 L 102.0009765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">pek</text><text x="0" y="10" class="sb-label" transform="translate(28.8134765625 5)">mot</text><g transform="translate(52.9501953125 4)"><g width="46.05078125" height="14" class="sb-input sb-input-dropdown"><rect x="0" y="0" width="46.05078125" height="14" class="sb-motion sb-darker"/></g><text x="0" y="10" class="sb-label sb-literal-dropdown" transform="translate(4 0)">Earth</text><polygon points="7 0 3.5 4 0 0" fill="#000" opacity="0.6" transform="translate(36.05078125 5)"/></g></g><g transform="translate(0 48)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 74.759765625 0 L 77.759765625 3 L 77.759765625 19 L 74.759765625 22 L 27 22 L 24 25 L 16 25 L 13 22 L 3 22 L 0 19 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 5)">gå</text><g transform="translate(30 4)"><path d="M 6.5 0 L 9.0966796875 0 A 6.5 6.5 0 0 1 9.0966796875 13 L 6.5 13 A 6.5 6.5 0 0 1 6.5 0 Z" class="sb-input sb-input-number"/><text x="0" y="10" class="sb-label sb-literal-number" transform="translate(5 0)">1</text></g><text x="0" y="10" class="sb-label" transform="translate(49.5966796875 5)">steg</text></g><g transform="translate(0 70)"><path d="M 0 3 L 3 0 L 13 0 L 16 3 L 24 3 L 27 0 L 160.1201171875 0 L 163.1201171875 3 L 163.1201171875 23 L 160.1201171875 26 L 27 26 L 24 29 L 16 29 L 13 26 L 3 26 L 0 23 Z" class="sb-motion sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(6 7)">pek</text><text x="0" y="10" class="sb-label" transform="translate(28.8134765625 7)">i</text><text x="0" y="10" class="sb-label" transform="translate(36.0654296875 7)">retning</text><g transform="translate(77.5068359375 3)"><path d="M 10 0 L 69.61328125 0 A 10 10 0 0 1 69.61328125 20 L 10 20 A 10 10 0 0 1 10 0 Z" class="sb-variables sb-bevel"/><text x="0" y="10" class="sb-label" transform="translate(8 4)">katteretning</text></g></g></g></g></g></g><style><![CDATA[.sb-label {
+          font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, sans-serif;
+          font-weight: bold;
+          fill: #fff;
+          font-size: 10px;
+          word-spacing: +1px;
+        }
+        .sb-obsolete { fill: #d42828; }
+        .sb-motion { fill: #4a6cd4; }
+        .sb-looks { fill: #8a55d7; }
+        .sb-sound { fill: #bb42c3; }
+        .sb-pen { fill: #0e9a6c;  }
+        .sb-events { fill: #c88330; }
+        .sb-control { fill: #e1a91a; }
+        .sb-sensing { fill: #2ca5e2; }
+        .sb-operators { fill: #5cb712; }
+        .sb-variables { fill: #ee7d16; }
+        .sb-list { fill: #cc5b22 }
+        .sb-custom { fill: #632d99; }
+        .sb-custom-arg { fill: #5947b1; }
+        .sb-extension { fill: #4b4a60; }
+        .sb-grey { fill: #969696; }
+        .sb-bevel {
+          filter: url(#bevelFilter);
+        }
+        .sb-input {
+          filter: url(#inputBevelFilter);
+        }
+        .sb-input-number,
+        .sb-input-string,
+        .sb-input-number-dropdown {
+          fill: #fff;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown,
+        .sb-literal-dropdown {
+          font-weight: normal;
+          font-size: 9px;
+          word-spacing: 0;
+        }
+        .sb-literal-number,
+        .sb-literal-string,
+        .sb-literal-number-dropdown {
+          fill: #000;
+        }
+        .sb-darker {
+          filter: url(#inputDarkFilter);
+        }
+        .sb-outline {
+          stroke: #fff;
+          stroke-opacity: 0.2;
+          stroke-width: 2;
+          fill: none;
+        }
+        .sb-define-hat-cap {
+          stroke: #632d99;
+          stroke-width: 1;
+          fill: #8e2ec2;
+        }
+        .sb-comment {
+          fill: #ffffa5;
+          stroke: #d0d1d2;
+          stroke-width: 1;
+        }
+        .sb-comment-line {
+          fill: #ffff80;
+        }
+        .sb-comment-label {
+          font-family: DejaVu Sans, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+          fill: #5c5d5f;
+          word-spacing: 0;
+          font-size: 12px;
+        }
+        ]]></style></svg>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__flag__-k25x">
+    <h2 class="Content__flag__-k25x"><img src="/CCV-assets/flag.4a58cd.svg" alt="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="Content__task-list__3UDth">
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_28"><label for="cbx_28"> Kan du styre katten igjen?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_29"><label for="cbx_29"> Hvis du ikke trykker på noen taster, vil katten da falle ned mot jorden?</label></p>
+      </li>
+      <li class="Content__task-list-item__2un2C">
+        <p><input type="checkbox" id="cbx_30"><label for="cbx_30"> Legg merke til at hvis katten har kommet veldig nært jorden klarer
+          den ikke å fly tilbake til oss. Det er fordi gravitasjonen er
+          kraftigere jo nærmere jorda man er. Og når katten kommer nært jorda
+          har den ikke nok hastighet til å unnslippe jordas gravitasjon.</label></p>
+        <p>Hvordan kan du endre på jordas gravitasjon og kattens hastighet?</p>
+      </li>
+    </ul>
+  </section>
+  <section class="Content__save__19ziW">
+    <h2 class="Content__save__19ziW"><img src="/CCV-assets/save.0a8afb.svg" alt="save">Lagre spillet</h2>
+    <p>Da har vi en katt som kan fly rundt i verdensrommet. Eksperimenter
+      gjerne med å utvide spillet ditt. Når du er ferdig kan du klikke på
+      <code>Legg ut</code>-knappen. Da vil spillet bli lagt ut på Scratch-hjemmesiden
+      din slik at andre kan spille det.</p>
+  </section>
+</section>

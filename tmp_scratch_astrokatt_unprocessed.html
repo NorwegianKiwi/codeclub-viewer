@@ -1,0 +1,314 @@
+<section class="intro">
+  <h1 class="intro">Introduksjon</h1>
+  <p>Katten vår har så lyst å være en astronaut, la oss se om vi kan hjelpe
+    ham? Underveis vil vi lære hvordan vi flytter figurer rundt på
+    skjermen, og hvordan katter blir påvirket av gravitasjonskreftene fra
+    jorden.</p>
+  <figure><img src="astrokatt.png" alt="Bilde av en katt i verdensrommet"></figure>
+</section>
+<section class="activity">
+  <h1 class="activity">Steg 1: En flyvende katt</h1>
+  <p>Vi begynner prosjektet vårt med å få katten til å fly!</p>
+  <section class="check">
+    <h2 class="check">Sjekkliste</h2>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_0"><label for="cbx_0"> Start et nytt prosjekt. Du vil se en katt som venter på å bli
+          programmert!</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_1"><label for="cbx_1"> Prøv å klikk på de blå klossene midt på skjermen. For eksempel, om
+          du klikker på</label></p>
+        <pre class=blocks>gå (10) steg
+</pre>
+        <p>skal du se at katten flytter litt på seg, og om du klikker på</p>
+        <pre class=blocks>vend høyre (15) grader
+</pre>
+        <p>vil den snu seg! Disse klossene er kommandoer vi kan gi til
+          katten!</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_2"><label for="cbx_2"> Legg merke til at at over de blå klossene er det flere kategorier av
+          kommandoer i forskjellige farger, for eksempel
+          <code class="blocklooks">Utseende</code> og <code class="blocksound">Lyd</code>. Klikk på disse
+          kategoriene og prøv noen av klossene du finner!</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_3"><label for="cbx_3"> For å sette sammen flere kommandoer til et skript kan du dra klosser
+          til det store tomme området til høyre på skjermen.</label></p>
+        <p>Prøv å pusle sammen disse klossene (bruk fargene for å finne
+          riktig kategori):</p>
+        <pre class=blocks>når grønt flagg klikkes
+for alltid
+    gå (10) steg
+    vend høyre (15) grader
+slutt
+</pre>
+      </li>
+    </ul>
+  </section>
+  <section class="flag">
+    <h2 class="flag">Test prosjektet</h2>
+    <p>Legg merke til at den første klossen sier at noe skal skje når vi
+      klikker et grønt flagg. Over vinduet med katten til venstre er det et
+      grønt flagg. <strong>Klikk på det!</strong></p>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_4"><label for="cbx_4"> Du skal se at katten flytter seg rundt i en sirkel. Les koden du
+          laget en gang til. Skjønner du hvorfor katten går i sirkel?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_5"><label for="cbx_5"> Prøv å endre tallene i koden din. Kan du få katten til å gå saktere?
+          I større sirkler?</label></p>
+      </li>
+    </ul>
+  </section>
+  <section class="check">
+    <h2 class="check">Sjekkliste</h2>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_6"><label for="cbx_6"> Nå skal vi endre litt på koden slik at vi kan kontrollere hvordan
+          katten beveger seg. I kategorien <code class="blocksensing">Sansning</code> finnes en
+          kloss som reagerer når en tast er trykket. Den kan vi bruke til å
+          styre katten med piltastene.</label></p>
+        <p>Bytt ut klossene i koden din slik at den blir seende slik ut:</p>
+        <pre class=blocks>når grønt flagg klikkes
+for alltid
+    hvis &lt;tast [pil høyre v] trykket?&gt;
+        vend høyre (5) grader
+    slutt
+    hvis &lt;tast [pil venstre v] trykket?&gt;
+        vend venstre (5) grader
+    slutt
+    hvis &lt;tast [pil opp v] trykket?&gt;
+        gå (5) steg
+    slutt
+slutt
+</pre>
+      </li>
+    </ul>
+  </section>
+  <section class="flag">
+    <h2 class="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_7"><label for="cbx_7"> Kan du styre katten rundt ved å bruke piltastene?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_8"><label for="cbx_8"> Forstår du hvordan katten kontrolleres?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_9"><label for="cbx_9"> Kan du få katten til å fly raskere eller saktere ved å endre i koden?</label></p>
+      </li>
+    </ul>
+  </section>
+</section>
+<section class="activity">
+  <h1 class="activity">Steg 2: Ut i verdensrommet!</h1>
+  <p>Nå skal vi sende den flyvende katten ut i verdensrommet.</p>
+  <section class="check">
+    <h2 class="check">Sjekkliste</h2>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_10"><label for="cbx_10"> Klikk på <img src="../bilder/velg-bakgrunn.png" alt="Velg ny bakgrunn"> nederst
+          til venstre på skjermen for å hente inn en ny bakgrunn. Velg
+          bakgrunnen <code>stars</code> som du finner i kategorien <code>Romfart</code>.</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_11"><label for="cbx_11"> Vi skal også gi katten en liten oksygentank, siden den flyr rundt
+          ute i rommet. Klikk på katten i figurvinduet og deretter på fanen
+          <code>Drakter</code> øverst på skjermen.</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_12"><label for="cbx_12"> Velg først en litt lys farge. Klikk deretter på Ellipse-verktøyet
+          til høyre på skjermen, og tegn en ellipse rundt hodet på katten.</label></p>
+        <figure><img src="katt_oksygentank.png" alt="Bilde av katt med oksygentank"></figure>
+      </li>
+    </ul>
+    <p>Til slutt lager vi også en jordklode, som katten kan fly rundt.</p>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" id="cbx_13"><label for="cbx_13"> Klikk på fanen <code>Skript</code> og deretter på
+        <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">. Velg
+        jordklodefiguren <code>Romfart/Earth</code>. Plasser denne litt på siden av skjermen.</label></li>
+    </ul>
+  </section>
+  <section class="flag">
+    <h2 class="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" id="cbx_14"><label for="cbx_14"> Flyr katten rundt omkring i verdensrommet?</label></li>
+    </ul>
+  </section>
+</section>
+<section class="activity">
+  <h1 class="activity">Steg 3: Litt mer ekte ...</h1>
+  <p>Vi skal nå legge på noen effekter som gjør at spillet virker litt mer
+    realistisk.</p>
+  <section class="check">
+    <h2 class="check">Sjekkliste</h2>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_15"><label for="cbx_15"> Først kan vi få jordkloden til å rotere. Dette er enkelt, vi har jo
+          allerede gjort det for katten! Pass på at jordkloden er merket i
+          figurlisten, og lag deretter dette skriptet:</label></p>
+        <pre class=blocks>når grønt flagg klikkes
+for alltid
+    vend høyre (1) grader
+slutt
+</pre>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_16"><label for="cbx_16"> Videre skal vi gjøre det slik at det ser ut som om katten flyr mot
+          jorda. Det gjør vi ved å endre størrelsen slik at katten blir mindre
+          jo nærmere den kommer jordkloden.</label></p>
+        <p>Klikk på katten i figurlisten. Legg <code class="blocklooks">sett størrelse til</code> nederst i <code class="blockcontrol">for alltid</code>-løkka,
+          slik at størrelsen på katten er avhengig av avstanden til
+          jordkloden:</p>
+        <pre class=blocks>når grønt flagg klikkes
+for alltid
+    hvis &lt;tast [pil høyre v] trykket?&gt;
+        vend høyre (5) grader
+    slutt
+    hvis &lt;tast [pil venstre v] trykket?&gt;
+        vend venstre (5) grader
+    slutt
+    hvis &lt;tast [pil opp v] trykket?&gt;
+        gå (5) steg
+    slutt
+    sett størrelse til (avstand til [Earth v])%
+slutt
+</pre>
+      </li>
+    </ul>
+  </section>
+  <section class="flag">
+    <h2 class="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_17"><label for="cbx_17"> Blir katten mindre når den nærmer seg jorda?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_18"><label for="cbx_18"> Ser det ut som om den flyr ned mot jorda, og kommer tilbake til oss?</label></p>
+      </li>
+    </ul>
+  </section>
+  <section class="check">
+    <h2 class="check">Sjekkliste</h2>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_19"><label for="cbx_19"> For å gjøre det enda mer realistisk vil vi forandre hvor langt
+          katten flytter seg med. Når den er langt unna oss flytter den seg
+          ikke like mange steg. Bytt ut</label></p>
+        <pre class=blocks>gå (5) steg
+</pre>
+        <p>med</p>
+        <pre class=blocks>gå ((avstand til [Earth v]) / (50)) steg
+</pre>
+        <p>Denne klossen er litt komplisert fordi den er satt sammen av tre
+          forskjellige klosser. Se på fargene så finner du de riktige
+          klossene.</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_20"><label for="cbx_20"> Av og til vil katten fly bak jordkloden. For å slippe det kan du
+          legge klossen <code class="blocklooks">legg foran</code> først i katten sitt
+          skript.</label></p>
+      </li>
+    </ul>
+  </section>
+  <section class="flag">
+    <h2 class="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_21"><label for="cbx_21"> Flyr katten rundt omkring i verdensrommet? Kan du få den til å lande
+          på jorda?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_22"><label for="cbx_22"> Prøv også å flytte jordkloden til andre steder på skjermen. Blir det
+          annerledes å fly med katten nå?</label></p>
+      </li>
+    </ul>
+  </section>
+</section>
+<section class="activity">
+  <h1 class="activity">Steg 4: Gravitasjon</h1>
+  <p>Gravitasjon er kraften som jorda trekker på alle katter og mennesker
+    med. Vi kan la astrokatten vår bli påvirket av gravitasjonen også.</p>
+  <section class="check">
+    <h2 class="check">Sjekkliste</h2>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_23"><label for="cbx_23"> Lag et nytt skript på katten. Du kan bare legge klossene ved siden
+          av det skriptet du allerede har laget. Skriptet skal se slik ut:</label></p>
+        <pre class=blocks>når grønt flagg klikkes
+gå til x: (-200) y: (150)
+for alltid
+    pek mot [Earth v]
+    gå (1) steg
+slutt
+</pre>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_24"><label for="cbx_24"> Når du tester programmet ditt ved å klikke på det grønne flagget,
+          vil du se at katten svever mot jordkloden. Gravitasjonen trekker på
+          den!</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_25"><label for="cbx_25"> MEN, vi har et problem: Vi kan ikke lengre styre katten! Hva har skjedd?</label></p>
+        <p>I det nye skriptet sier vi at katten <code class="blockcontrol">for alltid</code>
+          skal <code class="blockmotion">peke mot</code> jordkloden. Da hjelper det jo ikke
+          at vi i det andre skriptet sier at katten skal snu seg.</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_26"><label for="cbx_26"> Det er ingen kommando i Scratch for å flytte en figur mot en
+          annen. Derfor må vi peke katten mot jordkloden og deretter flytte
+          den. Men vi kan få programmet til å virke igjen, hvis vi bare husker
+          hvilken retning katten pekte før vi snudde den.</label></p>
+        <p>For at programmer skal huske ting bruker vi variabler. Lag en
+          variabel ved å klikke på <code class="blockdata">Data</code>-kategorien og deretter
+          på <code>Lag en variabel</code>. Kall variabelen <code>katteretning</code>.</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_27"><label for="cbx_27"> Vi kan nå bruke denne variabelen til å huske hvilken retning katten
+          pekte. Endre skriptet ditt ved å legge til to nye klosser:</label></p>
+        <pre class=blocks>når grønt flagg klikkes
+gå til x: (-200) y: (150)
+for alltid
+    sett [katteretning v] til (retning)
+    pek mot [Earth v]
+    gå (1) steg
+    pek i retning (katteretning)
+slutt
+</pre>
+      </li>
+    </ul>
+  </section>
+  <section class="flag">
+    <h2 class="flag">Test prosjektet</h2>
+    <p><strong>Klikk på det grønne flagget.</strong></p>
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_28"><label for="cbx_28"> Kan du styre katten igjen?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_29"><label for="cbx_29"> Hvis du ikke trykker på noen taster, vil katten da falle ned mot jorden?</label></p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" id="cbx_30"><label for="cbx_30"> Legg merke til at hvis katten har kommet veldig nært jorden klarer
+          den ikke å fly tilbake til oss. Det er fordi gravitasjonen er
+          kraftigere jo nærmere jorda man er. Og når katten kommer nært jorda
+          har den ikke nok hastighet til å unnslippe jordas gravitasjon.</label></p>
+        <p>Hvordan kan du endre på jordas gravitasjon og kattens hastighet?</p>
+      </li>
+    </ul>
+  </section>
+  <section class="save">
+    <h2 class="save">Lagre spillet</h2>
+    <p>Da har vi en katt som kan fly rundt i verdensrommet. Eksperimenter
+      gjerne med å utvide spillet ditt. Når du er ferdig kan du klikke på
+      <code>Legg ut</code>-knappen. Da vil spillet bli lagt ut på Scratch-hjemmesiden
+      din slik at andre kan spille det.</p>
+  </section>
+</section>

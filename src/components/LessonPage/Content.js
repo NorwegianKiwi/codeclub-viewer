@@ -1,15 +1,18 @@
-import React from 'react';
+//import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './Content.scss';
-import {processContent} from '../../utils/processContent';
+//import {processContent} from '../../utils/processContent';
 import htmlToReact from '../../utils/htmlToReact';
 import {getLessonContent} from '../../resources/lessonContent';
 
-const createMarkup = (lessonContent, isHydrated) => {
-  return ({__html: processContent(lessonContent, styles, isHydrated)});
-};
+// const createMarkup = (lessonContent, isHydrated) => {
+//   //console.log('unprocessed:', lessonContent);
+//   const __html = processContent(lessonContent, styles, isHydrated);
+//   //console.log('__html:', __html);
+//   return {__html};
+// };
 
 // const Loading = () => <div>Loading...</div>;
 //
@@ -23,7 +26,8 @@ const createMarkup = (lessonContent, isHydrated) => {
 const Content = ({course, lesson, language, isReadme, isHydrated}) => {
   const lessonContent = getLessonContent(course, lesson, language, isReadme);
   //return <div dangerouslySetInnerHTML={createMarkup(lessonContent, isHydrated)}/>;
-  return <div>{htmlToReact(processContent(lessonContent, styles, isHydrated))}</div>;
+  //return htmlToReact(processContent(lessonContent, styles, isHydrated));
+  return htmlToReact(lessonContent, styles, isHydrated);
 };
 Content.propTypes = {
   // ownProps
