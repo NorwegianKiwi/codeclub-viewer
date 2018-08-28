@@ -39,6 +39,7 @@ import path from 'path';
 import MarkdownItAttrs from 'markdown-it-attrs';
 import MarkdownItHeaderSections from 'markdown-it-header-sections';
 import MarkdownItImplicitFigures from 'markdown-it-implicit-figures';
+import MarkdownItKatex from 'markdown-it-katex';
 import MarkdownItTaskCheckbox from 'markdown-it-task-checkbox';
 import highlight from './src/highlighting';
 
@@ -134,7 +135,7 @@ const createConfig = (env = {}) => {
         lessonSrc,
         lessonFiltertags,
         assets,
-        bootstrapStyles
+        bootstrapStyles,
       }
     },
 
@@ -230,6 +231,9 @@ const createConfig = (env = {}) => {
     },
 
     plugins: [
+      new webpack.DefinePlugin({
+        'IS_HOT': JSON.stringify(isHot),
+      }),
       new webpack.LoaderOptionsPlugin({
         options: {
           context: __dirname,   // needed for bootstrap-loader
@@ -244,6 +248,7 @@ const createConfig = (env = {}) => {
               MarkdownItAttrs,
               MarkdownItHeaderSections,
               MarkdownItImplicitFigures,
+              MarkdownItKatex,
               [MarkdownItTaskCheckbox, {disabled: false}],
             ],
             highlight,
@@ -251,12 +256,18 @@ const createConfig = (env = {}) => {
         }
       }),
 
-      new CopyWebpackPlugin([{
-        context: lessonSrc,
-        from: lessonSrc + '/**/*',
-        ignore: '*.md',
-        to: buildDir + '/[path][name].[ext]'
-      }]),
+      new CopyWebpackPlugin([
+        { // Copy all resource files (i.e. all files not included via javascript)
+          context: lessonSrc,
+          from: lessonSrc + '/**/*',
+          ignore: ['*.md', '*.yml'],
+          to: buildDir + '/[path][name].[ext]'
+        },
+        { // Copy extra files that need to be included
+          from: './src/assets/deploy/',
+          to: buildDir
+        }
+      ]),
 
       new CaseSensitivePathsPlugin(),
 
