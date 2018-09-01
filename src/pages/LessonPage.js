@@ -3,11 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import ReactDOM from 'react-dom';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './LessonPage.scss';
 import LevelIcon from '../components/LevelIcon';
-import ToggleButton from '../components/LessonPage/ToggleButton';
 import ImprovePage from '../components/LessonPage/ImprovePage.js';
 import {getTranslator} from '../selectors/translate';
 import {setCheckboxes, createCheckboxesKey} from '../utils/checkboxUtils';
@@ -24,23 +22,11 @@ import {getLevel, getLicense} from '../resources/lessons';
 import Head from '../components/Head';
 import PrintInfo from '../components/LessonPage/PrintInfo';
 
-const renderToggleButtons = () => {
-  const nodes = [...document.getElementsByClassName('togglebutton')];
-  for (let node of nodes) {
-    const strongNode = node.getElementsByTagName('strong')[0];
-    const buttonText = strongNode ? strongNode.textContent : 'Hint';
-    const hiddenNode = node.getElementsByTagName('hide')[0];
-    const hiddenHTML = hiddenNode ? hiddenNode.innerHTML : '';
-    ReactDOM.render(<ToggleButton {...{buttonText, hiddenHTML}}/>,node);
-  }
-};
-
 class LessonPage extends React.PureComponent {
   componentDidMount() {
     const {path, checkboxes, setCheckbox, setLastLesson} = this.props;
     setCheckboxes(path, checkboxes, setCheckbox);
     setLastLesson(path);
-    renderToggleButtons();
   }
 
   render() {

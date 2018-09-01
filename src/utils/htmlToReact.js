@@ -3,7 +3,36 @@ import React from 'react';
 import convertAttr from 'react-attr-converter';
 import htmlParser from 'parse5';
 import styleParser from './styleParser';
+import ToggleButton from '../components/LessonPage/ToggleButton';
 
+/*
+The parse5.parseFragment() returns the following tree:
+{
+  nodeName: '#document-fragment',
+  childNodes: [
+    {
+      nodeName: 'h1',
+      tagName: 'h1',
+      attrs: [
+        {name: 'class', value: 'myClass'},
+        ...
+      ],
+      namespaceURI: 'http://www.w3.org/1999/xhtml',
+      childNodes: [
+        {...},
+        ...
+      ],
+      parentNode: {nodeName: '#document-fragment', childNodes: [ ... ]},
+    },
+    {
+      nodeName: '#text',
+      value: 'Any text or perhaps a line shift',
+      parentNode: {nodeName: '#document-fragment', childNodes: [ ... ]},
+    },
+    ...
+  ]
+}
+ */
 const getClass = (attrs) => {
   for (let attr of attrs) {
     if (attr.name === 'class') {
@@ -13,13 +42,31 @@ const getClass = (attrs) => {
 };
 
 const setClass = (attrs, value) => {
-  for (let attr of attrs) {
+  for (let attr of attrs) { // Loop through and check if there already exist an attribute "class"
     if (attr.name === 'class') {
-      attr.value = value;
+      attr.value = [attr.value, value].join(' ').trim(); // Add value to existing
       return;
     }
   }
-  attrs.push({name: 'class', value});
+  attrs.push({name: 'class', value}); // If attribute "class" didn't exist, create it
+};
+
+const getFirstChildWithTagname = (node, tagName) => {
+  for (const child of node.childNodes) {
+    if (child.tagName === tagName) {
+      return child;
+    }
+  }
+  return null;
+};
+
+const getTextContent = (node) => {
+  for (const child of node.childNodes) {
+    if (child.nodeName === '#text') {
+      return child.value;
+    }
+  }
+  return '';
 };
 
 const renderScratchBlocks = (node) => {
@@ -47,15 +94,6 @@ const createModifyStyles = (styles) => (node) => {
       attr.value = styles[attr.value];
     }
   });
-};
-
-const replaceToggle = (node) => {
-  if (node.tagName === 'toggle') {
-    node.nodeName = 'div';
-    node.tagName = 'div';
-    const className = `${getClass(node.attrs) || ''} togglebutton`.trim();
-    setClass(node.attrs, className);
-  }
 };
 
 const headerIcons = {
@@ -111,6 +149,16 @@ const AstNodeToReact = (node, key) => {
     return React.createElement('script', attr);
   }
 
+  // Extra replacements:
+  if (node.nodeName === 'toggle') {
+    const strongNode = getFirstChildWithTagname(node, 'strong');
+    attr.buttonText = strongNode ? getTextContent(strongNode) : 'Hint';
+    const hiddenNode = getFirstChildWithTagname(node, 'hide');
+    attr.hiddenHTML = hiddenNode ? htmlParser.serialize(hiddenNode) : '';
+    return React.createElement(ToggleButton, attr);
+  }
+  //////////////////////
+
   const children = node.childNodes.map(AstNodeToReact);
   return React.createElement(node.tagName, attr, children);
 };
@@ -128,7 +176,6 @@ const htmlToReact = (html, styles, isHydrated) => {
   if (typeof document !== 'undefined' && isHydrated) {
     modifiers.push(renderScratchBlocks);
   }
-  modifiers.push(replaceToggle);
   modifiers.push(insertHeaderIcons);
   modifiers.push(createModifyStyles(styles)); // This one should come last
 
