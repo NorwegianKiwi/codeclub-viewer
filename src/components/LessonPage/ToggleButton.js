@@ -10,8 +10,6 @@ class ToggleButton extends React.PureComponent {
     open: false,
   };
 
-  createMarkup = () => ({__html: this.props.hiddenHTML});
-
   handleClick = () => this.setState({open: !this.state.open});
 
   render() {
@@ -33,7 +31,7 @@ class ToggleButton extends React.PureComponent {
         <Collapse in={this.state.open}>
           <div>
             <div style={contentStyle}>
-              <div dangerouslySetInnerHTML={this.createMarkup()}/>
+              {this.props.children}
             </div>
           </div>
         </Collapse>
@@ -45,7 +43,6 @@ class ToggleButton extends React.PureComponent {
 ToggleButton.propTypes = {
   // ownProps
   buttonText: PropTypes.string,
-  hiddenHTML: PropTypes.string
 };
 
 export default ToggleButton;

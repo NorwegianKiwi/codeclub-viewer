@@ -149,13 +149,13 @@ const AstNodeToReact = (node, key) => {
     return React.createElement('script', attr);
   }
 
-  // Extra replacements:
+  // Extra replacements, perhaps extract (include scripts?):
   if (node.nodeName === 'toggle') {
     const strongNode = getFirstChildWithTagname(node, 'strong');
     attr.buttonText = strongNode ? getTextContent(strongNode) : 'Hint';
     const hiddenNode = getFirstChildWithTagname(node, 'hide');
-    attr.hiddenHTML = hiddenNode ? htmlParser.serialize(hiddenNode) : '';
-    return React.createElement(ToggleButton, attr);
+    const children = hiddenNode ? hiddenNode.childNodes.map(AstNodeToReact) : '';
+    return React.createElement(ToggleButton, attr, children);
   }
   //////////////////////
 
