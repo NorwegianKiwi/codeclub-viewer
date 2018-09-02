@@ -6,40 +6,45 @@ import styleParser from './styleParser';
 import ToggleButton from '../components/LessonPage/ToggleButton';
 import ScratchBlocks from '../components/LessonPage/ScratchBlocks';
 
-/*
-The parse5.parseFragment() returns the following tree:
-{
-  nodeName: '#document-fragment',
-  childNodes: [
-    {
-      nodeName: 'h1',
-      tagName: 'h1',
-      attrs: [
-        {name: 'class', value: 'myClass'},
-        ...
-      ],
-      namespaceURI: 'http://www.w3.org/1999/xhtml',
-      childNodes: [
-        {...},
-        ...
-      ],
-      parentNode: {nodeName: '#document-fragment', childNodes: [ ... ]},
-    },
-    {
-      nodeName: '#text',
-      value: 'Any text or perhaps a line shift',
-      parentNode: {nodeName: '#document-fragment', childNodes: [ ... ]},
-    },
-    ...
-  ]
-}
+/**
+ *
+ * The parse5.parseFragment() returns the following tree:
+ * {
+ *   nodeName: '#document-fragment',
+ *   childNodes: [
+ *     {
+ *       nodeName: 'h1',
+ *       tagName: 'h1',
+ *       attrs: [
+ *         {name: 'class', value: 'myClass'},
+ *         ...
+ *       ],
+ *       namespaceURI: 'http://www.w3.org/1999/xhtml',
+ *       childNodes: [
+ *         {...},
+ *         ...
+ *       ],
+ *       parentNode: {nodeName: '#document-fragment', childNodes: [ ... ]},
+ *     },
+ *     {
+ *       nodeName: '#text',
+ *       value: 'Any text or perhaps a line shift',
+ *       parentNode: {nodeName: '#document-fragment', childNodes: [ ... ]},
+ *     },
+ *     ...
+ *   ]
+ * }
  */
+
+
+
 const getClass = (attrs) => {
   for (let attr of attrs) {
     if (attr.name === 'class') {
       return attr.value;
     }
   }
+  return null;
 };
 
 const setClass = (attrs, value) => {
