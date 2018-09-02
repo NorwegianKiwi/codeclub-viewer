@@ -5,6 +5,7 @@ import htmlParser from 'parse5';
 import styleParser from './styleParser';
 import ToggleButton from '../components/LessonPage/ToggleButton';
 import ScratchBlocks from '../components/LessonPage/ScratchBlocks';
+import Heading2 from '../components/LessonPage/Heading2';
 
 /**
  *
@@ -72,31 +73,31 @@ const createModifyStyles = (styles) => (node) => {
     }
   });
 };
-
-const headerIcons = {
-  'check': require('assets/graphics/check.svg'),
-  'flag': require('assets/graphics/flag.svg'),
-  'save': require('assets/graphics/save.svg'),
-};
-const insertHeaderIcons = (node) => {
-  if (node.tagName === 'h2') {
-    const className = getClass(node.attrs);
-    if (Object.keys(headerIcons).includes(className)) {
-      const imgNode = {
-        nodeName: 'img',
-        tagName: 'img',
-        attrs: [
-          {name: 'src', value: headerIcons[className]},
-          {name: 'alt', value: className},
-        ],
-        namespaceURI: 'http://www.w3.org/1999/xhtml',
-        childNodes: [],
-        parentNode: node,
-      };
-      node.childNodes.unshift(imgNode);
-    }
-  }
-};
+//
+// const headerIcons = {
+//   'check': require('assets/graphics/check.svg'),
+//   'flag': require('assets/graphics/flag.svg'),
+//   'save': require('assets/graphics/save.svg'),
+// };
+// const insertHeaderIcons = (node) => {
+//   if (node.tagName === 'h2') {
+//     const className = getClass(node.attrs);
+//     if (Object.keys(headerIcons).includes(className)) {
+//       const imgNode = {
+//         nodeName: 'img',
+//         tagName: 'img',
+//         attrs: [
+//           {name: 'src', value: headerIcons[className]},
+//           {name: 'alt', value: className},
+//         ],
+//         namespaceURI: 'http://www.w3.org/1999/xhtml',
+//         childNodes: [],
+//         parentNode: node,
+//       };
+//       node.childNodes.unshift(imgNode);
+//     }
+//   }
+// };
 
 const walkTree = (node, modifiers) => {
   const skipNodeNames = ['#text', '#comment', 'svg'];
@@ -143,6 +144,12 @@ const AstNodeToReact = (node, key) => {
     attr.inline = isCode;
     return React.createElement(ScratchBlocks, attr);
   }
+
+  if (node.nodeName === 'h2') {
+    attr.type = nodeClass;
+    const children = node.childNodes.map(AstNodeToReact);
+    return React.createElement(Heading2, attr, children);
+  }
   //////////////////////
 
   const children = node.childNodes.map(AstNodeToReact);
@@ -159,7 +166,6 @@ const htmlToReact = (html, styles) => {
   //////////////////
   // Modify AST tree
   const modifiers = [];
-  modifiers.push(insertHeaderIcons);
   modifiers.push(createModifyStyles(styles)); // This one should come last
 
   htmlAST.childNodes.forEach(node => walkTree(node, modifiers));
