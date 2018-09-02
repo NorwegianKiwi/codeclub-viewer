@@ -47,16 +47,6 @@ const getClass = (attrs) => {
   return null;
 };
 
-const setClass = (attrs, value) => {
-  for (let attr of attrs) { // Loop through and check if there already exist an attribute "class"
-    if (attr.name === 'class') {
-      attr.value = [attr.value, value].join(' ').trim(); // Add value to existing
-      return;
-    }
-  }
-  attrs.push({name: 'class', value}); // If attribute "class" didn't exist, create it
-};
-
 const getFirstChildWithTagname = (node, tagName) => {
   for (const child of node.childNodes) {
     if (child.tagName === tagName) {

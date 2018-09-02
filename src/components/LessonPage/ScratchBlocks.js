@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './ScratchBlocks.scss';
-const scratchblocks = require('scratchblocks/browser/scratchblocks.js');
+import scratchblocks from 'scratchblocks/browser/scratchblocks.js';
 
 const ScratchBlocks = ({scratchCode, inline, isHydrated}) => {
   if (isHydrated) {
