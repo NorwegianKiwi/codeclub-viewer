@@ -4,6 +4,7 @@ import convertAttr from 'react-attr-converter';
 import htmlParser from 'parse5';
 import styleParser from './styleParser';
 import ToggleButton from '../components/LessonPage/ToggleButton';
+import ScratchBlocks from '../components/LessonPage/ScratchBlocks';
 
 /*
 The parse5.parseFragment() returns the following tree:
@@ -67,25 +68,6 @@ const getTextContent = (node) => {
     }
   }
   return '';
-};
-
-const renderScratchBlocks = (node) => {
-  const isPre = node.nodeName === 'pre' && getClass(node.attrs) === 'blocks';
-  const isCode = node.nodeName === 'code' && getClass(node.attrs) === 'b';
-  if (isPre || isCode) {
-    const scratchblocks = require('scratchblocks/browser/scratchblocks.js');
-    const scratchCode = node.childNodes.filter(child => child.nodeName === '#text')[0].value;
-    const SVG = scratchblocks(scratchCode, {inline: isCode});
-    const parsedSVG = htmlParser.parseFragment(SVG).childNodes[0];
-    // To switch out the current node, we have to go via the parentNode:
-    const siblings = node.parentNode.childNodes;
-    for (let idx = 0; idx < siblings.length; ++idx) {
-      if (siblings[idx] === node) {
-        siblings[idx] = parsedSVG;
-        return;
-      }
-    }
-  }
 };
 
 const createModifyStyles = (styles) => (node) => {
@@ -157,13 +139,22 @@ const AstNodeToReact = (node, key) => {
     const children = hiddenNode ? hiddenNode.childNodes.map(AstNodeToReact) : '';
     return React.createElement(ToggleButton, attr, children);
   }
+
+  const nodeClass = getClass(node.attrs);
+  const isPre = node.nodeName === 'pre' && nodeClass === 'blocks';
+  const isCode = node.nodeName === 'code' && nodeClass === 'b';
+  if (isPre || isCode) {
+    attr.scratchCode = getTextContent(node);
+    attr.inline = isCode;
+    return React.createElement(ScratchBlocks, attr);
+  }
   //////////////////////
 
   const children = node.childNodes.map(AstNodeToReact);
   return React.createElement(node.tagName, attr, children);
 };
 
-const htmlToReact = (html, styles, isHydrated) => {
+const htmlToReact = (html, styles) => {
   let htmlAST = htmlParser.parseFragment(html);
 
   if (htmlAST.childNodes.length === 0) {
@@ -173,9 +164,6 @@ const htmlToReact = (html, styles, isHydrated) => {
   //////////////////
   // Modify AST tree
   const modifiers = [];
-  if (typeof document !== 'undefined' && isHydrated) {
-    modifiers.push(renderScratchBlocks);
-  }
   modifiers.push(insertHeaderIcons);
   modifiers.push(createModifyStyles(styles)); // This one should come last
 
