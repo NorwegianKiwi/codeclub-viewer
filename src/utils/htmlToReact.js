@@ -1,11 +1,13 @@
 // Inspired by https://github.com/utatti/react-render-html/blob/master/index.js
 import React from 'react';
 import convertAttr from 'react-attr-converter';
-import htmlParser from 'parse5';
+import parse5 from 'parse5';
 import styleParser from './styleParser';
-import ToggleButton from '../components/LessonPage/ToggleButton';
-import ScratchBlocks from '../components/LessonPage/ScratchBlocks';
-import Heading2 from '../components/LessonPage/Heading2';
+import ToggleButton from '../components/Content/ToggleButton';
+import ScratchBlocks from '../components/Content/ScratchBlocks';
+import Heading2 from '../components/Content/Heading2';
+import Section from '../components/Content/Section';
+import Heading1 from '../components/Content/Heading1';
 
 /**
  *
@@ -37,11 +39,9 @@ import Heading2 from '../components/LessonPage/Heading2';
  * }
  */
 
-
-
-const getClass = (attrs) => {
+const getAttribute = (attrs, attrName) => {
   for (let attr of attrs) {
-    if (attr.name === 'class') {
+    if (attr.name === attrName) {
       return attr.value;
     }
   }
@@ -136,7 +136,7 @@ const AstNodeToReact = (node, key) => {
     return React.createElement(ToggleButton, attr, children);
   }
 
-  const nodeClass = getClass(node.attrs);
+  const nodeClass = getAttribute(node.attrs, 'class');
   const isPre = node.nodeName === 'pre' && nodeClass === 'blocks';
   const isCode = node.nodeName === 'code' && nodeClass === 'b';
   if (isPre || isCode) {
@@ -145,11 +145,24 @@ const AstNodeToReact = (node, key) => {
     return React.createElement(ScratchBlocks, attr);
   }
 
+  if (node.nodeName === 'section') {
+    attr.type = nodeClass;
+    const children = node.childNodes.map(AstNodeToReact);
+    return React.createElement(Section, attr, children);
+  }
+
+  if (node.nodeName === 'h1') {
+    attr.type = nodeClass;
+    const children = node.childNodes.map(AstNodeToReact);
+    return React.createElement(Heading1, attr, children);
+  }
+
   if (node.nodeName === 'h2') {
     attr.type = nodeClass;
     const children = node.childNodes.map(AstNodeToReact);
     return React.createElement(Heading2, attr, children);
   }
+
   //////////////////////
 
   const children = node.childNodes.map(AstNodeToReact);
@@ -157,7 +170,7 @@ const AstNodeToReact = (node, key) => {
 };
 
 const htmlToReact = (html, styles) => {
-  let htmlAST = htmlParser.parseFragment(html);
+  let htmlAST = parse5.parseFragment(html);
 
   if (htmlAST.childNodes.length === 0) {
     return null;
