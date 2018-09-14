@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.checkboxList { // This is a list with checkboxes that can be checked
+  > li::before {
+    opacity: 0; // Hide blue circle
+  }
+  > li {
+    // Either target components directly under the "li" (using ">")
+    // or, if they are wrapped with e.g. <p>, make sure they are not in a nested child list (using ":not(ul)")
+    >,
+    :not(ul) {
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+      }
+
+      input[type="checkbox"] + label {
+        position: relative;
+        font-weight: normal;
+        margin-left: 0;
+      }
+
+      input[type="checkbox"] + label::before {
+        content: '\a0'; // non-breaking space
+        display: inline-block;
+        visibility: visible;
+        width: 1.3em;
+        height: 1.3em;
+        margin: 0 0.6em 0 -2.2em;
+        line-height: 1.1em;
+        border: 3px solid $checkbox-blue;
+        border-radius: 3px;
+      }
+
+      input[type="checkbox"]:checked + label::before {
+        content: '\2714'; // checkmark
+        line-height: 1.1em;
+        padding-left: 0.1em;
+      }
+
+      input[type="checkbox"]:active + label::before,
+      input[type="checkbox"]:focus + label::before {
+        background: darken($checkbox-blue, 20%);
+      }
+
+      label {
+        font-weight: normal;
+        margin-left: 6px;
+      }
+    }
+  }
+}

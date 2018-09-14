@@ -5,9 +5,10 @@ import parse5 from 'parse5';
 import styleParser from './styleParser';
 import ToggleButton from '../components/Content/ToggleButton';
 import ScratchBlocks from '../components/Content/ScratchBlocks';
-import Heading2 from '../components/Content/Heading2';
 import Section from '../components/Content/Section';
 import Heading1 from '../components/Content/Heading1';
+import Heading2 from '../components/Content/Heading2';
+import TaskList from '../components/Content/TaskList';
 
 /**
  *
@@ -163,31 +164,23 @@ const AstNodeToReact = (node, key) => {
     return React.createElement(Heading2, attr, children);
   }
 
+  if (node.nodeName === 'ul' && nodeClass === 'task-list') {
+    const children = node.childNodes.map(AstNodeToReact);
+    return React.createElement(TaskList, attr, children);
+  }
+
   //////////////////////
 
   const children = node.childNodes.map(AstNodeToReact);
   return React.createElement(node.tagName, attr, children);
 };
 
-const htmlToReact = (html, styles) => {
+const htmlToReact = (html) => {
   let htmlAST = parse5.parseFragment(html);
 
   if (htmlAST.childNodes.length === 0) {
     return null;
   }
-
-  //////////////////
-  // Modify AST tree
-  const modifiers = [];
-  modifiers.push(createModifyStyles(styles)); // This one should come last
-
-  htmlAST.childNodes.forEach(node => walkTree(node, modifiers));
-  // if (typeof document !== 'undefined') {
-  //   console.log('modified AST-tree:', htmlAST);
-  //   console.log('html:', htmlParser.serialize(htmlAST));
-  // }
-
-  //////////////////
 
   const result = htmlAST.childNodes.map(AstNodeToReact);
 
