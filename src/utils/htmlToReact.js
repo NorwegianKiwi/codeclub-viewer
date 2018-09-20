@@ -59,97 +59,139 @@ const getFirstChildWithTagname = (node, tagName) => {
   return null;
 };
 
-const getTextContent = (node) => {
-  for (const child of node.childNodes) {
-    if (child.nodeName === '#text') {
-      return child.value;
+const getTextContent = (node, defaultValue = '') => {
+  if (node) {
+    for (const child of node.childNodes) {
+      if (child.nodeName === '#text') {
+        return child.value;
+      }
     }
   }
-  return '';
+  return defaultValue;
 };
 
+/**
+ * nodeName {string} (required) The nodeName (tagName) of the html node to replace
+ * className {string|regex}  (optional) Further specification of the html node to replace
+ * newElement {string|React-class} (required) The element to render instead of the current html node.
+ * attributes {obj|func} (optional) If given, these attributes (props) will be sent to the new element.
+ *                       Can also be a function, which gets the current node as an argument. The function
+ *                       must return an object.
+ * useChildrenOf {node|func} (optional, defaults to the current node).
+ *                           Change if you want a different node's children to be send to the new element.
+ *                           Set to null if no children are needed.
+ *                           Can also be a function, which gets the current node as an argument. The function
+ *                           must return a node, or the value null.
+ */
+const replacements = [
+  {
+    nodeName: 'script',
+    newElement: 'script',
+    attributes: (node) => ({
+      dangerouslySetInnerHTML: {__html: node.childNodes[0].value},
+    }),
+    useChildrenOf: null,
+  },
+  {
+    nodeName: 'toggle',
+    newElement: ToggleButton,
+    attributes: (node) => ({
+      buttonText: getTextContent(getFirstChildWithTagname(node, 'strong'), 'Hint'),
+    }),
+    useChildrenOf: (node) => getFirstChildWithTagname(node, 'hide'),
+  },
+  {
+    nodeName: 'pre',
+    className: 'blocks',
+    newElement: ScratchBlocks,
+    attributes: (node) => ({scratchCode: getTextContent(node)}),
+    useChildrenOf: null,
+  },
+  {
+    nodeName: 'code',
+    className: 'b',
+    newElement: ScratchBlocks,
+    attributes: (node) => ({
+      scratchCode: getTextContent(node),
+      inline: true,
+    }),
+  },
+  {
+    nodeName: 'code',
+    className: /^block/,
+    newElement: ScratchText,
+  },
+  {
+    nodeName: 'section',
+    newElement: Section,
+  },
+  {
+    nodeName: 'h1',
+    newElement: Heading1,
+  },
+  {
+    nodeName: 'h2',
+    newElement: Heading2,
+  },
+  {
+    nodeName: 'section',
+    newElement: Section,
+  },
+  {
+    nodeName: 'ul',
+    className: 'task-list',
+    newElement: TaskList,
+  },
+];
+
 const AstNodeToReact = (node, key) => {
-  if (node.nodeName === '#text' || node.nodeName === '#comment') {
+  const nodeName = node.nodeName;
+
+  if (nodeName === '#text' || nodeName === '#comment') {
     return node.value;
   }
 
-  const attr = node.attrs.reduce( (result, attr) => {
+  const className = getAttribute(node.attrs, 'class');
+  const attrs = node.attrs.reduce( (result, attr) => {
     const name = convertAttr(attr.name);
     result[name] = name === 'style' ? styleParser(attr.value) : attr.value;
     return result;
   }, {key: key});
 
   if (node.childNodes.length === 0) {
-    return React.createElement(node.tagName, attr);
+    return React.createElement(node.tagName, attrs);
   }
 
-  if (node.nodeName === 'script') {
-    attr.dangerouslySetInnerHTML = {__html: node.childNodes[0].value};
-    return React.createElement('script', attr);
+  for (const r of replacements) {
+    if (r.nodeName === nodeName) {
+      if (
+        r.className == null || // null or undefined
+        typeof r.className === 'string' && r.className === className ||
+        r.className instanceof RegExp && r.className.test(className)
+      ) {
+        const newAttrs = (typeof r.attributes === 'function' ? r.attributes(node) : r.attributes) || {};
+        const mergedAttrs = {...attrs, ...newAttrs};
+        const useChildrenOf = typeof r.useChildrenOf === 'function' ? r.useChildrenOf(node) : r.useChildrenOf || node;
+        if (useChildrenOf) {
+          const children = useChildrenOf.childNodes.map(AstNodeToReact);
+          return React.createElement(r.newElement, mergedAttrs, children);
+        } else {
+          return React.createElement(r.newElement, mergedAttrs);
+        }
+      }
+    }
   }
-
-  // Extra replacements, perhaps extract (include scripts?):
-  if (node.nodeName === 'toggle') {
-    const strongNode = getFirstChildWithTagname(node, 'strong');
-    attr.buttonText = strongNode ? getTextContent(strongNode) : 'Hint';
-    const hiddenNode = getFirstChildWithTagname(node, 'hide');
-    const children = hiddenNode ? hiddenNode.childNodes.map(AstNodeToReact) : '';
-    return React.createElement(ToggleButton, attr, children);
-  }
-
-  const nodeClass = getAttribute(node.attrs, 'class');
-  const isPre = node.nodeName === 'pre' && nodeClass === 'blocks';
-  const isCode = node.nodeName === 'code' && nodeClass === 'b';
-  if (isPre || isCode) {
-    attr.scratchCode = getTextContent(node);
-    attr.inline = isCode;
-    return React.createElement(ScratchBlocks, attr);
-  }
-
-  if (node.nodeName === 'code' && nodeClass && nodeClass.startsWith('block')) {
-    attr.type = nodeClass;
-    const children = node.childNodes.map(AstNodeToReact);
-    return React.createElement(ScratchText, attr, children);
-  }
-
-  if (node.nodeName === 'section') {
-    attr.type = nodeClass;
-    const children = node.childNodes.map(AstNodeToReact);
-    return React.createElement(Section, attr, children);
-  }
-
-  if (node.nodeName === 'h1') {
-    attr.type = nodeClass;
-    const children = node.childNodes.map(AstNodeToReact);
-    return React.createElement(Heading1, attr, children);
-  }
-
-  if (node.nodeName === 'h2') {
-    attr.type = nodeClass;
-    const children = node.childNodes.map(AstNodeToReact);
-    return React.createElement(Heading2, attr, children);
-  }
-
-  if (node.nodeName === 'ul' && nodeClass === 'task-list') {
-    const children = node.childNodes.map(AstNodeToReact);
-    return React.createElement(TaskList, attr, children);
-  }
-
-  //////////////////////
 
   const children = node.childNodes.map(AstNodeToReact);
-  return React.createElement(node.tagName, attr, children);
+  return React.createElement(node.tagName, attrs, children);
 };
 
 const htmlToReact = (html) => {
   let htmlAST = parse5.parseFragment(html);
-
   if (htmlAST.childNodes.length === 0) {
     return null;
   }
-
   const result = htmlAST.childNodes.map(AstNodeToReact);
-
   return result.length === 1 ? result[0] : result;
 };
 

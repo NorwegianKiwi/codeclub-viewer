@@ -10,15 +10,15 @@ const icons = {
 };
 const iconTypes = Object.keys(icons);
 
-const Heading2 = ({type, children}) => {
-  return <h2 className={styles[type] || type || null}>
-    {iconTypes.includes(type) ? <img src={icons[type]} className={styles.img} alt={type}/> : null}
+const Heading2 = ({className, children}) => {
+  return <h2 className={styles[className] || className || null}>
+    {iconTypes.includes(className) ? <img src={icons[className]} className={styles.img} alt={className}/> : null}
     {children}
   </h2>;
 };
 
 Heading2.propTypes = {
-  type: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default withStyles(styles)(Heading2);
