@@ -4,7 +4,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './Heading1.scss';
 
 const Heading1 = ({type, children}) => {
-  return <h1 className={styles[type] || null}>
+  return <h1 className={styles[type] || type || null}>
     {children}
   </h1>;
 };

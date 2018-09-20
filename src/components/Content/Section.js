@@ -4,9 +4,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './Section.scss';
 
 const Section = ({type, children}) => {
-  const classNames = [styles.styledList];
-  if (styles[type]) { classNames.push(styles[type]); }
-  return <section className={classNames.join(' ')}>
+  return <section className={styles[type] || type || null}>
     {children}
   </section>;
 };

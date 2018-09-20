@@ -11,7 +11,7 @@ const icons = {
 const iconTypes = Object.keys(icons);
 
 const Heading2 = ({type, children}) => {
-  return <h2 className={styles[type] || null}>
+  return <h2 className={styles[type] || type || null}>
     {iconTypes.includes(type) ? <img src={icons[type]} className={styles.img} alt={type}/> : null}
     {children}
   </h2>;

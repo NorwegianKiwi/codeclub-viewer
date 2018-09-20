@@ -9,6 +9,7 @@ import Section from '../components/Content/Section';
 import Heading1 from '../components/Content/Heading1';
 import Heading2 from '../components/Content/Heading2';
 import TaskList from '../components/Content/TaskList';
+import ScratchText from '../components/Content/ScratchText';
 
 /**
  *
@@ -67,47 +68,6 @@ const getTextContent = (node) => {
   return '';
 };
 
-const createModifyStyles = (styles) => (node) => {
-  node.attrs.forEach(attr => {
-    if (attr.name === 'class' && attr.value in styles) {
-      attr.value = styles[attr.value];
-    }
-  });
-};
-//
-// const headerIcons = {
-//   'check': require('assets/graphics/check.svg'),
-//   'flag': require('assets/graphics/flag.svg'),
-//   'save': require('assets/graphics/save.svg'),
-// };
-// const insertHeaderIcons = (node) => {
-//   if (node.tagName === 'h2') {
-//     const className = getClass(node.attrs);
-//     if (Object.keys(headerIcons).includes(className)) {
-//       const imgNode = {
-//         nodeName: 'img',
-//         tagName: 'img',
-//         attrs: [
-//           {name: 'src', value: headerIcons[className]},
-//           {name: 'alt', value: className},
-//         ],
-//         namespaceURI: 'http://www.w3.org/1999/xhtml',
-//         childNodes: [],
-//         parentNode: node,
-//       };
-//       node.childNodes.unshift(imgNode);
-//     }
-//   }
-// };
-
-const walkTree = (node, modifiers) => {
-  const skipNodeNames = ['#text', '#comment', 'svg'];
-  if (!skipNodeNames.includes(node.nodeName)) {
-    node.childNodes.forEach(node => walkTree(node, modifiers));
-    modifiers.forEach(modifier => modifier(node));
-  }
-};
-
 const AstNodeToReact = (node, key) => {
   if (node.nodeName === '#text' || node.nodeName === '#comment') {
     return node.value;
@@ -144,6 +104,12 @@ const AstNodeToReact = (node, key) => {
     attr.scratchCode = getTextContent(node);
     attr.inline = isCode;
     return React.createElement(ScratchBlocks, attr);
+  }
+
+  if (node.nodeName === 'code' && nodeClass && nodeClass.startsWith('block')) {
+    attr.type = nodeClass;
+    const children = node.childNodes.map(AstNodeToReact);
+    return React.createElement(ScratchText, attr, children);
   }
 
   if (node.nodeName === 'section') {

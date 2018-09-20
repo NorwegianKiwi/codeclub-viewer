@@ -54,55 +54,6 @@
     background-color: transparent;
   }
 
-  //TODO: How to deal with det various "code .blockXXX"? A ScratchCodeComponent? Or add it to the ScratchBlocks component?
-  // manual colors for scratch code
-  // example: Press `motion`{.blockmotion} ...
-  code {
-    &.blockmotion {
-      background-color: #505fd7;
-    }
-    &.blocklooks {
-      background-color: #9b33d9;
-    }
-    &.blocksound {
-      background-color: #d000c2;
-    }
-    &.blockpen {
-      background-color: #00a16f;
-    }
-    &.blockdata {
-      background-color: #ff7500;
-    }
-    &.blockevents {
-      background-color: #d38117;
-    }
-    &.blockcontrol {
-      background-color: #e9aa00;
-    }
-    &.blocksensing {
-      background-color: #00a3e6;
-    }
-    &.blockoperators {
-      background-color: #00c114;
-    }
-    &.blockmoreblocks {
-      background-color: #71009a;
-    }
-
-    &.blockmotion,
-    &.blocklooks,
-    &.blocksound,
-    &.blockpen,
-    &.blockdata,
-    &.blockevents,
-    &.blockcontrol,
-    &.blocksensing,
-    &.blockoperators,
-    &.blockmoreblocks {
-      color: #fff;
-    }
-  }
-
   //// tables
   table {
     // add table class to all tables, assumes that tables are only used
@@ -120,20 +71,4 @@
     }
   }
 
-  // TODO: Have a separate VideoContainer component?
-  // embedded videos
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%; // 16:9
-    height: 0;
-    overflow: hidden;
-    margin: 30px 0 60px;
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
 }
