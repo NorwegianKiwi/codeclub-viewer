@@ -145,7 +145,11 @@ const renderScratchBlocks = (content, styles) => {
         let doc = scratchblocks.parse(code, r.options);
         let docView = scratchblocks.newView(doc, {style: 'scratch3'});
         let svg = docView.render();
-        returnContent = returnContent.replace(block, svg.outerHTML);
+        let html = svg.outerHTML;
+        if (r.options.inline) {
+          html = `<span class="${styles.inlineScratchblocks}">${html}</span>`;
+        }
+        returnContent = returnContent.replace(block, html);
       });
     }
   });
